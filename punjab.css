@@ -1,0 +1,1790 @@
+
+        /* ─────────────────────────────────────────────
+           COLOUR PALETTE  (light, warm, colourful)
+        ───────────────────────────────────────────── */
+        :root {
+
+            /* ─────────────────────────────────────────────
+               NEW COLOR PALETTE (Sophisticated Blues)
+            ───────────────────────────────────────────── */
+
+            /* Base adjustments for the new cohesive theme */
+
+            /* Mapping original semantic colors to the new palette */
+
+            /* ── CHANGED: three-font typography system ── */
+            --font-heading: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            --font-subhead: 'Playfair Display', Georgia, serif;
+            --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
+
+            /* keep --font-display aliased so no other property breaks */
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: rgb(17, 24, 39);
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-weight: 400;
+            /* CHANGED → Roboto reads best at 400, not 300 */
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+
+        /* ─── KEYFRAMES ─── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(36px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes gentleBob {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes colorCycle {
+            0% {
+                border-color: rgb(14, 165, 233);
+            }
+
+            33% {
+                border-color: rgb(245, 158, 11);
+            }
+
+            66% {
+                border-color: rgb(5, 150, 105);
+            }
+
+            100% {
+                border-color: rgb(14, 165, 233);
+            }
+        }
+
+        @keyframes marqueeScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ─── NAVBAR ─── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 52px;
+            background: rgba(250, 247, 240, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(240, 232, 216, 0.8);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            /* CHANGED → Cinzel */
+            font-size: 1.2rem;
+            /* slightly smaller — Cinzel runs wide */
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            /* CHANGED → Cinzel needs breathing room */
+            color: rgb(17, 24, 39);
+        }
+
+        .nav-logo em {
+            color: rgb(5, 150, 105);
+            font-style: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 34px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            /* CHANGED → tighter caps tracking */
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+            transition: color 0.25s;
+
+        }
+
+
+
+        .nav-links a:hover {
+            color: rgb(17, 24, 39);
+        }
+
+
+        /* Navbar Clickable Calendar Styling */
+        .nav-calendar {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+            background: transparent;
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            border-radius: 5px;
+            padding: 4px 8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-calendar:hover,
+        .nav-calendar:focus {
+            border-color: rgb(17, 24, 39);
+            color: rgb(17, 24, 39);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Ensures the calendar icon inside the input is clickable */
+        ::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+        }
+
+
+        /* ════════════════════════════════════════════
+           HERO — VIDEO BACKGROUND
+        ════════════════════════════════════════════ */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 130px 32px 80px;
+        }
+
+        /* ════════════════════════════════════════════════════
+           🎬  VIDEO BACKGROUND — HOW TO ADD YOUR VIDEO
+           ════════════════════════════════════════════════════
+           STEP 1: Delete the <div class="hero-video-slot"> block below.
+           STEP 2: Paste this right inside <section class="hero">
+                   as its FIRST child:
+
+               <video class="hero-video"
+                      autoplay muted loop playsinline
+                      poster="your-cover-image.jpg">
+                   <source src="[PLACEHOLDER_VIDEO_URL]"  type="video/mp4">
+                   <source src="[PLACEHOLDER_VIDEO_URL]" type="video/webm">
+               </video>
+
+           STEP 3: Keep the <div class="hero-overlay"> — it adds the
+                   warm colour tint over the video. Tweak the opacity
+                   values inside .hero-overlay to make it lighter/darker.
+           ════════════════════════════════════════════════════ */
+
+        /* Applied to your real <video> element once added */
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Placeholder shown until you add the real video */
+        .hero-video-slot {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg,
+                    #b3e5fc 0%, #81d4fa 20%, #4fc3f7 42%,
+                    #29b6f6 60%, #03a9f4 78%, #0288d1 100%);
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video-slot-inner {
+            border: 2px dashed rgba(28, 28, 28, 0.5);
+            border-radius: 16px;
+            padding: 28px 44px;
+            text-align: center;
+            animation: colorCycle 4s linear infinite, gentleBob 4s ease-in-out infinite;
+        }
+
+        .hero-video-slot-inner .vicon {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .hero-video-slot-inner p {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(250, 250, 255, 0.8);
+            margin-top: 4px;
+        }
+
+        /* Warm tint overlay on top of video — lightened for video clarity */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(2, 136, 209, 0.15) 0%,
+                    rgba(1, 87, 155, 0.25) 55%,
+                    rgba(250, 247, 240, 0.55) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(28, 28, 28, 0.22);
+            border: 1px solid rgba(28, 28, 28, 0.48);
+            backdrop-filter: blur(8px);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            /* CHANGED → wide-tracked small caps feel */
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 26px;
+        }
+
+        .hero-title {
+            color: rgb(255, 255, 255);
+            font-family: var(--font-heading);
+            /* CHANGED → Cinzel — royal, heritage feel */
+            font-size: clamp(2.8rem, 7.5vw, 6rem);
+            /* CHANGED → slightly smaller, Cinzel is wider */
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            /* CHANGED → Cinzel needs extra tracking */
+            color: #fff;
+            line-height: 1.05;
+            text-shadow: 0 4px 32px rgba(0, 0, 0, 0.22);
+            margin-bottom: 14px;
+        }
+
+        /* CHANGED → "Pradesh" uses Playfair Display italic for contrast */
+        .hero-title em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgb(253, 230, 138);
+        }
+
+        /* CHANGED → Playfair Display italic for the subtitle tagline */
+        .hero-tagline {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.35rem;
+            letter-spacing: 0.01em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 28px;
+        }
+
+        /* CHANGED → Roboto for readable body description */
+        .hero-desc {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.9;
+            color: rgba(250, 250, 255, 0.8);
+            max-width: 560px;
+            margin: 0 auto 42px;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* CHANGED → Roboto for both buttons */
+        .btn-solid {
+            padding: 13px 36px;
+            background: rgb(245, 158, 11);
+            color: rgb(17, 24, 39);
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .btn-solid:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-ghost {
+            padding: 13px 36px;
+            background: rgba(28, 28, 28, 0.18);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            border-radius: 50px;
+            border: 1px solid rgba(28, 28, 28, 0.48);
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.25s;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(28, 28, 28, 0.32);
+        }
+
+        /* CHANGED → Roboto for small UI label */
+
+
+        /* ─── STATS STRIP ─── */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: rgb(255, 255, 255);
+            border-top: 3px solid rgb(254, 240, 138);
+            border-bottom: 3px solid rgb(254, 240, 138);
+        }
+
+        .stat-strip-item {
+            padding: 36px 24px;
+            text-align: center;
+            border-right: 1px solid rgb(254, 240, 138);
+            animation: fadeUp 0.7s ease both;
+            position: relative;
+        }
+
+        .stat-strip-item:last-child {
+            border-right: none;
+        }
+
+        .stat-strip-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 16px;
+            right: 16px;
+            height: 3px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .stat-strip-item:nth-child(1)::before {
+            background: rgb(14, 165, 233);
+        }
+
+        .stat-strip-item:nth-child(2)::before {
+            background: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3)::before {
+            background: rgb(5, 150, 105);
+        }
+
+        .stat-strip-item:nth-child(4)::before {
+            background: rgb(249, 115, 22);
+        }
+
+        .stat-strip-item:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .stat-strip-item:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+        .stat-strip-item:nth-child(4) {
+            animation-delay: .3s;
+        }
+
+        /* CHANGED → Cinzel for stat numbers — authoritative, elegant */
+        .stat-num {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            display: block;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-strip-item:nth-child(1) .stat-num {
+            color: rgb(14, 165, 233);
+        }
+
+        .stat-strip-item:nth-child(2) .stat-num {
+            color: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3) .stat-num {
+            color: rgb(5, 150, 105);
+        }
+
+        .stat-strip-item:nth-child(4) .stat-num {
+            color: rgb(249, 115, 22);
+        }
+
+        /* CHANGED → Roboto for UI labels */
+        .stat-label {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+        }
+
+
+        /* --- culture ---- */
+
+        /* 1. Constrain the main section */
+        #culture {
+            padding: 90px 0;
+            background: #ffffff;
+        }
+
+        /* 2. Create the scrollable "Viewport" */
+        #culture .wrapper {
+            max-height: 740px;
+            /* Adjust this height to your preference */
+            overflow-y: auto;
+            /* Enables vertical scrolling */
+            overflow-x: hidden;
+            /* Prevents accidental horizontal shifting */
+            padding-right: 15px;
+            /* Space for the scrollbar so it doesn't overlap text */
+
+            /* Smooth scrolling behavior */
+            scroll-behavior: smooth;
+
+            /* 3. Hide the div elements that are outside the "scroll box" */
+            clip-path: inset(0 0 0 0);
+            position: relative;
+        }
+
+
+        .culture-scroll-container {
+            max-height: 600px;
+            overflow-y: scroll;
+            padding: 20px;
+            border: 1px solid rgb(254, 240, 138);
+            /* Optional: defines the scroll area visually */
+            border-radius: 15px;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+
+
+        /* ─── LAYOUT ─── */
+
+        .wrapper {
+            max-width: 1620px;
+            margin: 0 auto;
+            padding: 0 44px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+
+        /* CHANGED → Roboto for all small section kicker labels */
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            /* CHANGED → wider tracking for label clarity */
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+            margin-bottom: 14px;
+        }
+
+        .section-kicker::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: rgb(5, 150, 105);
+            border-radius: 2px;
+        }
+
+        /* CHANGED → Cinzel for main section headings */
+        .section-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+            /* CHANGED → adjusted for Cinzel's width */
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            /* CHANGED → Cinzel tracking */
+            color: rgb(17, 24, 39);
+            line-height: 1.2;
+            margin-bottom: 36px;
+        }
+
+        /* CHANGED → Playfair Display italic for the em word inside headings */
+        .section-heading em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: rgb(5, 150, 105);
+        }
+
+        hr.fancy {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, rgb(186, 230, 253), rgb(253, 230, 138), rgb(110, 231, 183));
+            border-radius: 2px;
+        }
+
+        /* ─── TEXT / IMAGE SLOT STYLES ─── */
+        .txt-slot {
+            border-left: 3px solid rgb(14, 165, 233);
+            background: rgb(224, 242, 254);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px 18px 20px;
+            margin-bottom: 22px;
+            transition: border-color .3s, background .3s;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 12px;
+        }
+
+
+
+        /* CHANGED → Roboto for placeholder tag labels */
+        .txt-slot-tag {
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgb(14, 165, 233);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+
+
+        /* CHANGED → Roboto italic for placeholder hint text */
+        .txt-slot p {
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: rgb(55, 65, 81);
+            font-style: italic;
+            margin: 0 !important;
+        }
+
+        .img-slot {
+            background: linear-gradient(135deg, rgb(224, 242, 254), rgb(209, 250, 229));
+            border: 2px dashed rgba(56, 189, 248, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .img-slot .ic {
+            font-size: 2rem;
+            animation: gentleBob 4s ease-in-out infinite;
+        }
+
+        /* CHANGED → Roboto for image slot labels */
+        .img-slot .il {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+        }
+
+        /* CHANGED → Roboto light for image slot hint */
+        .img-slot .ih {
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 300;
+            color: rgb(75, 85, 99);
+        }
+
+        .img-slot-tall {
+            height: 420px;
+        }
+
+        .img-slot-medium {
+            height: 260px;
+        }
+
+        .img-slot.amber {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border-color: rgba(245, 158, 11, .3);
+        }
+
+
+        .img-slot.amber .il {
+            color: rgb(245, 158, 11);
+        }
+
+        .img-slot.coral {
+            background: linear-gradient(135deg, rgb(255, 237, 213), rgb(253, 186, 116));
+            border-color: rgba(224, 112, 82, .3);
+        }
+
+
+
+        .img-slot.coral .il {
+            color: rgb(249, 115, 22);
+        }
+
+        .img-slot.forest {
+            background: linear-gradient(135deg, rgb(236, 253, 245), rgb(52, 211, 153));
+            border-color: rgba(22, 101, 52, .25);
+        }
+
+
+
+        .img-slot.forest .il {
+            color: rgb(6, 78, 59);
+        }
+
+        .img-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Shows the FULL image, may leave some empty space if aspect ratios differ */
+            border-radius: 12px;
+            /* Optional: matches the aesthetic of your site */
+            display: block;
+            padding: 0 !important;
+        }
+
+        /* ─── ABOUT GRID ─── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        /* CHANGED → Removed scrolling from parent, added to individual txt-slot divs */
+
+        /* CHANGED → Roboto for all body/paragraph text */
+        .about-text p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.95;
+            color: rgb(17, 24, 39);
+            margin-bottom: 22px;
+        }
+
+        /* ─── PULL QUOTE ─── */
+        .pull-quote-wrap {
+            background: linear-gradient(135deg, rgb(224, 242, 254), rgb(209, 250, 229));
+            border-radius: 20px;
+            padding: 52px 60px;
+            position: relative;
+            overflow: hidden;
+            margin: 60px 0;
+        }
+
+        .pull-quote-wrap::before {
+            content: '\201C';
+            font-family: var(--font-subhead);
+            /* CHANGED → Playfair Display */
+            font-size: 10rem;
+            color: rgba(56, 189, 248, 0.18);
+            position: absolute;
+            top: -20px;
+            left: 24px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* CHANGED → Playfair Display italic for the pull quote */
+        .pull-quote-wrap blockquote {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.6rem;
+            letter-spacing: 0.01em;
+            color: rgb(17, 24, 39);
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        /* CHANGED → Roboto for the citation */
+        .pull-quote-wrap cite {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: rgb(55, 65, 81);
+        }
+
+
+
+        /* ---- modals---- */
+        /* ════ PURE CSS MODAL (CHECKBOX HACK) ════ */
+        /* Hide the actual checkboxes */
+        .modal-toggle {
+            display: none;
+        }
+
+        /* The dark, blurred background overlay */
+        .css-modal {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(28, 25, 23, 0.7);
+            /* Dark charcoal tint */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        /* Show the modal when the checkbox is checked */
+        .css-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* An invisible label that covers the background to close the modal when clicking outside */
+        .modal-close-bg {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        /* The actual white pop-out box */
+        .modal-content {
+            position: relative;
+            background: #ffffff;
+            width: 90%;
+            max-width: 1000px;
+            height: 75vh;
+            /* NEW: Locks the height to 75% of the screen height */
+            max-height: 600px;
+            /* NEW: Caps the size so it doesn't get too massive */
+            min-height: 400px;
+            /* Keeps your original minimum height */
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 10000;
+        }
+
+        /* Make the box pop beautifully when opened */
+        .css-modal.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Left side: Image */
+        .modal-left {
+            flex: 1;
+            background: rgb(224, 242, 254);
+        }
+
+        .modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Slideshow styles */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            animation: slideshow 12s infinite;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slideshow img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes slideshow {
+            0% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Right side: Text details */
+        .modal-right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* CHANGED: Starts text at the top so it doesn't cut off */
+            overflow-y: auto;
+            /* NEW: Makes the description scrollable */
+        }
+
+
+
+        .modal-right h3 {
+            font-family: var(--font-subhead);
+            font-size: 2.2rem;
+            color: rgb(17, 24, 39);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .modal-right p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: rgb(55, 65, 81);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        /* The "X" Close Button */
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #f1f5f9;
+            color: rgb(17, 24, 39);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .modal-close-btn:hover {
+            background: #e2e8f0;
+            color: rgb(17, 24, 39);
+
+        }
+
+        /* Responsive: Stack image on top of text for mobile */
+        @media (max-width: 900px) {
+            .modal-content {
+                flex-direction: column;
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+
+            .modal-left {
+                min-height: 300px;
+            }
+
+            .modal-right {
+                padding: 30px;
+            }
+        }
+
+        /* ─── CARDS ─── */
+        .cards-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+
+            /* ─── FULL WIDTH BLEED ─── */
+            width: 100vw;
+            /* Force width to 100% of the viewport */
+            position: relative;
+            left: 50%;
+            /* Move to center */
+            right: 50%;
+            margin-left: -50vw;
+            /* Pull back by half the viewport width */
+            margin-right: -50vw;
+
+            /* ─── PADDING & SCROLLING ─── */
+            padding: 20px 44px 40px;
+            /* Match side padding to your wrapper (44px) */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling for iOS */
+
+            /* Ensure the row itself doesn't hide the "emerging" card */
+            overflow-y: visible !important;
+            overflow-x: auto;
+        }
+
+        #places {
+            overflow: visible;
+        }
+
+        .cards-row .card {
+            flex: 0 0 400px;
+            /* Cards will be exactly 320px wide */
+            scroll-snap-align: start;
+            /* Snaps to the left edge of the screen */
+            margin-bottom: 10px;
+            /* Prevents shadow clipping */
+        }
+
+
+        /* ─────────────────────────────────────────────────────────────
+   ENHANCED POP-OUT CARD SYSTEM
+   Replaces your existing .card and .card:hover
+   ───────────────────────────────────────────────────────────── */
+
+        .card {
+            /* 1. LAYOUT: Keep your existing dimensions */
+            min-width: 400px;
+            flex: 0 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(17, 24, 39, 0.1);
+
+            /* 2. INITIAL STATE: Crucial for z-index to work */
+            position: relative;
+            z-index: 1;
+
+            /* 3. LOAD-IN: Keep your original slide-up animation */
+            animation: fadeUp 0.7s ease both;
+        }
+
+
+
+        .card:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+
+        .card-img-slot {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-img-slot img {
+            width: 100%;
+            height: 450px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .card-img-slot .ic {
+            font-size: 2rem;
+        }
+
+        .card-img-slot .il {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+        }
+
+        .card-body {
+            padding: 22px 24px 26px;
+        }
+
+        /* CHANGED → Roboto for card tags (UI labels) */
+        .card-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            border: 1px solid currentColor;
+        }
+
+        /* ─── CATEGORY TAG COLORS ─── */
+
+        /* Spiritual: Warm Amber/Gold */
+        .card-tag.spiritual {
+            background: rgb(255, 248, 225);
+            color: rgb(245, 158, 11);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        /* Heritage: Deep Prussian Blue */
+        .card-tag.heritage {
+            background: rgb(232, 240, 254);
+            color: rgb(2, 62, 125);
+            border-color: rgba(2, 62, 125, 0.3);
+        }
+
+        /* Nature: Fresh Emerald/Teal */
+        .card-tag.nature {
+            background: rgb(209, 250, 229);
+            color: rgb(5, 150, 105);
+            border-color: rgba(5, 150, 105, 0.3);
+        }
+
+        /* Cultural: Vibrant Coral/Orange */
+        .card-tag.cultural {
+            background: rgb(255, 237, 213);
+            color: rgb(249, 115, 22);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        /* CHANGED → Playfair Display for card titles */
+        .card-title {
+            font-family: var(--font-subhead);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        /* CHANGED → Roboto for card body text */
+        .card-text {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgb(55, 65, 81);
+            line-height: 1.8;
+        }
+
+        /* ─── TWO-COL ─── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .two-col.flip {
+            direction: rtl;
+        }
+
+        .two-col.flip>* {
+            direction: ltr;
+        }
+
+        /* CHANGED → Playfair Display for sub-section headings */
+        .col-text h3 {
+            font-family: var(--font-subhead);
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        /* CHANGED → Roboto for body paragraphs */
+        .col-text p {
+            font-family: var(--font-body);
+            font-size: 0.97rem;
+            font-weight: 400;
+            color: rgb(17, 24, 39);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* CHANGED → Roboto for inline link */
+        .read-more {
+            display: inline-block;
+            margin-top: 8px;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+            text-decoration: none;
+            border-bottom: 1px solid rgb(5, 150, 105);
+            padding-bottom: 2px;
+            transition: color .25s, border-color .25s;
+        }
+
+        .read-more:hover {
+            color: rgb(17, 24, 39);
+            border-color: rgb(17, 24, 39);
+        }
+
+        /* ─── COLOUR BAND ─── */
+        .colour-band {
+            background: linear-gradient(120deg, rgb(5, 150, 105) 0%, #0d6e85 60%, #1e40af 100%);
+            padding: 72px 44px;
+            text-align: center;
+        }
+
+        /* CHANGED → Cinzel for the full-width band heading */
+        .colour-band h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        /* CHANGED → Roboto for band body text */
+        .colour-band p {
+            font-family: var(--font-body);
+            font-weight: 300;
+            color: rgba(28, 28, 28, .78);
+            font-size: 1rem;
+            max-width: 580px;
+            margin: 0 auto 36px;
+            line-height: 1.85;
+        }
+
+        /* ─── HORIZONTAL TIMELINE ─── */
+        .timeline-horizontal {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /* --- Step buttons row --- */
+        .tl-steps {
+            display: flex;
+            position: relative;
+            gap: 0;
+        }
+
+        /* Horizontal connecting line behind the dots */
+        .tl-steps::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            right: 24px;
+            height: 3px;
+            background: linear-gradient(to right, rgb(2, 62, 125), rgb(14, 165, 233), rgb(0, 40, 85), rgb(14, 165, 233));
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        /* Each clickable step */
+        .tl-step {
+            flex: 1;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 0 8px 18px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .tl-step:hover {
+            transform: translateY(-3px);
+        }
+
+        /* The dot on the horizontal line */
+        .tl-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: rgb(2, 62, 125);
+            box-shadow: 0 0 0 2px rgb(2, 62, 125);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tl-step:nth-child(2) .tl-dot {
+            background: rgb(14, 165, 233);
+            box-shadow: 0 0 0 2px rgb(14, 165, 233);
+        }
+
+        .tl-step:nth-child(3) .tl-dot {
+            background: rgb(0, 40, 85);
+            box-shadow: 0 0 0 2px rgb(0, 40, 85);
+        }
+
+        .tl-step:nth-child(4) .tl-dot {
+            background: rgb(14, 165, 233);
+            box-shadow: 0 0 0 2px rgb(14, 165, 233);
+        }
+
+        .tl-step:nth-child(5) .tl-dot {
+            background: rgb(245, 158, 11);
+            box-shadow: 0 0 0 2px rgb(245, 158, 11);
+        }
+
+        .tl-step:nth-child(6) .tl-dot {
+            background: rgb(5, 150, 105);
+            box-shadow: 0 0 0 2px rgb(5, 150, 105);
+        }
+
+        .tl-step:nth-child(7) .tl-dot {
+            background: rgb(249, 115, 22);
+            box-shadow: 0 0 0 2px rgb(249, 115, 22);
+        }
+
+        .tl-step:nth-child(8) .tl-dot {
+            background: rgb(139, 92, 246);
+            box-shadow: 0 0 0 2px rgb(139, 92, 246);
+        }
+
+        /* Active step styling */
+        .tl-step[aria-selected="true"] .tl-dot {
+            transform: scale(1.4);
+            box-shadow: 0 0 0 3px currentColor, 0 0 14px rgba(14, 165, 233, 0.4);
+        }
+
+        .tl-step[aria-selected="true"] .tl-title {
+            color: rgb(2, 62, 125);
+        }
+
+        /* Year label */
+        .tl-year {
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            color: rgb(2, 62, 125);
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* Event title in the step button */
+        .tl-title {
+            font-family: var(--font-subhead);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: rgb(55, 65, 81);
+            line-height: 1.3;
+            text-align: center;
+            transition: color 0.3s;
+        }
+
+        /* --- Content panels area --- */
+        .tl-panels {
+            margin-top: 30px;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .tl-panel {
+            display: none;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .tl-panel.active {
+            display: block;
+        }
+
+        /* Text inside the panel */
+        .tl-panel>.tl-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: rgb(55, 65, 81);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* ════════════════════════════════════════════
+           🎬  INLINE VIDEO SLOT
+        ════════════════════════════════════════════ */
+
+
+        /* ─── EXTRA / FREE-FORM ─── */
+        /* This targets the iframe specifically inside your map section */
+        #map-section .img-slot iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: none;
+            border-radius: 12px;
+            /* Matches the aesthetic of your cards */
+        }
+
+        /* Removes the placeholder icons/text since the map is now live */
+        #map-section .img-slot .ic,
+        #map-section .img-slot .il,
+        #map-section .img-slot .ih {
+            display: none;
+        }
+
+
+
+
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .info-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 30px;
+            border: 1px solid rgb(254, 240, 138);
+            transition: box-shadow .3s;
+        }
+
+        .info-box:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+        }
+
+        #map-section .info-box {
+            padding: 16px 15px;
+        }
+
+        /* NEW: Styled Mauryan history detail cards */
+        .mp-details {
+            background: linear-gradient(160deg, rgba(238, 245, 250, 0.95), rgba(251, 239, 226, 0.95));
+            border: 1px solid rgba(63, 117, 133, .15);
+            border-radius: 20px;
+            padding: 26px;
+            margin: 30px 0;
+            box-shadow: 0 12px 30px rgba(12, 74, 102, 0.12);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .mp-details h2,
+        .mp-details h3,
+        .mp-details h4 {
+            font-family: var(--font-subhead);
+            color: rgb(17, 24, 39);
+        }
+
+        .mp-details h2 {
+            margin-bottom: 16px;
+            font-size: clamp(1.6rem, 2.6vw, 2rem);
+            letter-spacing: 0.04em;
+        }
+
+        .mp-details .box {
+            background: rgb(244, 246, 252);
+            /* Light, readable background matching your theme */
+            border-radius: 14px;
+            border: 1px solid rgba(2, 62, 125, 0.15);
+            /* Subtle Teal border */
+            padding: 14px 16px;
+            margin: 10px 0;
+        }
+
+        .mp-details .box h3,
+        .mp-details .box h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: rgb(2, 62, 125);
+            /* Teal headers inside the box */
+        }
+
+        /* Added a rule for paragraphs inside the box to ensure readability */
+        .mp-details .box p {
+            color: rgb(55, 65, 81);
+            /* Slate gray text */
+            line-height: 1.7;
+        }
+
+        .mp-details .box ul {
+            list-style: disc;
+            margin-left: 1.25rem;
+            color: rgb(55, 65, 81);
+            /* Slate gray text */
+            line-height: 1.7;
+        }
+
+        .mp-details .box ul li {
+            margin-bottom: 6px;
+        }
+
+        /* CHANGED → Playfair Display for info box headings */
+        .info-box-title {
+            font-family: var(--font-subhead);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .info-box:nth-child(1) .dot {
+            background: rgb(14, 165, 233);
+        }
+
+        .info-box:nth-child(2) .dot {
+            background: rgb(245, 158, 11);
+        }
+
+        .info-box:nth-child(3) .dot {
+            background: rgb(5, 150, 105);
+        }
+
+        .info-box:nth-child(4) .dot {
+            background: rgb(249, 115, 22);
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background: rgb(17, 24, 39);
+            padding: 60px 44px 28px;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 48px;
+        }
+
+        /* CHANGED → Cinzel for footer brand name */
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: rgb(255, 255, 255);
+            /* Solid White */
+            margin-bottom: 12px;
+        }
+
+        .footer-logo em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgb(129, 212, 250);
+            /* Soft Sky Blue accent */
+        }
+
+        /* CHANGED → Roboto light for footer description */
+        .footer-about {
+            font-family: var(--font-body);
+            font-size: .87rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.7);
+            /* Soft white for easy reading */
+            line-height: 1.85;
+            max-width: 270px;
+        }
+
+        /* CHANGED → Roboto for footer column headings (UI labels) */
+        .footer-col-heading {
+            font-family: var(--font-body);
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: rgb(129, 212, 250);
+            /* Soft Sky Blue */
+            margin-bottom: 16px;
+        }
+
+        .footer-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-list a {
+            font-family: var(--font-body);
+            text-decoration: none;
+            font-size: .87rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            /* Soft white */
+            transition: color .25s;
+        }
+
+        .footer-list a:hover {
+            color: rgb(255, 255, 255);
+            /* Bright white on hover */
+        }
+
+        /* CHANGED → Roboto for copyright line */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            /* Subtle white border */
+            padding-top: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: var(--font-body);
+            font-size: .75rem;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.5);
+            /* Dimmer white */
+        }
+
+        .colour-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .colour-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width:900px) {
+            .nav {
+                padding: 14px 22px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stat-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid,
+            .two-col,
+            .extra-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-width: 280px;
+            }
+
+            .cards-row {
+                grid-template-columns: 1fr;
+                padding-left: 22px;
+                /* Match your mobile wrapper padding */
+                padding-right: 22px;
+            }
+
+            .cards-row .card {
+                flex: 0 0 280px;
+                /* Slightly smaller cards for mobile */
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-grid .img-slot:nth-child(1) {
+                height: 280px;
+            }
+
+            .gallery-row-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .wrapper {
+                padding: 0 22px;
+            }
+
+            .pull-quote-wrap {
+                padding: 36px 28px;
+            }
+
+            /* CHANGED → smaller Cinzel sizes on mobile (font runs wide) */
+            .hero-title {
+                color: rgb(255, 255, 255);
+                font-size: clamp(2.2rem, 10vw, 3.5rem);
+                letter-spacing: 0.04em;
+            }
+
+            .section-heading {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+
+            .pull-quote-wrap blockquote {
+                font-size: 1.25rem;
+            }
+
+            .stat-num {
+                font-size: 2rem;
+            }
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            font-size: 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background: #333;
+            transform: scale(1.1);
+        }
+
+    

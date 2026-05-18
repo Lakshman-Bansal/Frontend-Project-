@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mumbai — The City of Dreams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="mumbai.css" />
+</head>
+
+<body>
+    <div class="content-container">
+        <a href="frontpage.html" class="back-button" style="display:none;">← Back to Map</a>
+
+        <nav class="nav">
+            <div class="nav-logo">Maharashtra <em></em></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Landmarks</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#map-section">Location</a></li>
+                <li><input type="date" class="nav-calendar" title="Select a Date"></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <!-- HINT: Insert an authentic drone shot or cinematic video of Mumbai here (e.g., Marine Drive at night or Bandra-Worli Sea Link). Avoid AI-generated stylized videos to keep it real. -->
+            <video class="hero-video" autoplay muted loop playsinline poster="placeholder.jpg">
+                <source src="your-video-file.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">🌆 The state of Dreams</div>
+                <h1 class="hero-title">Maharashtra<br><em></em></h1>
+                <p class="hero-tagline">Financial Capital, Bollywood, and Coastal Magic</p>
+                <p class="hero-desc">
+                   A vibrant state where historic forts, rich cultural heritage, bustling cities, and the scenic Western Ghats come together alongside a stunning Arabian Sea coastline to create one of India’s most diverse and dynamic regions.
+                </p>
+                <div class="hero-cta-row">
+                    <a href="#places" class="btn-solid">Explore Maharashtra</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="stat-strip">
+            <div class="stat-strip-item">
+                <span class="stat-num">307,713</span>
+                <span class="stat-label">Area km²</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">36</span>
+                <span class="stat-label">Districts</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">134M+</span>
+                <span class="stat-label">Metro Population</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">1</span>
+                <span class="stat-label">National Park within State</span>
+            </div>
+        </div>
+
+        <section class="section" id="about">
+            <div class="wrapper">
+                <div class="section-kicker">About the State</div>
+                <h2 class="section-heading">Maharashtra's <em>Economic Powerhouse</em></h2>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Mumbai, formerly known as Bombay, is the capital of Maharashtra and the financial, 
+                            commercial, and entertainment capital of India. It sits on the Konkan coast and is renowned 
+                            as the <strong>'City that Never Sleeps'</strong>.
+                        </p>
+
+                        <div class="txt-slot">
+                            <h1>Mumbai Overview</h1>
+
+                            <h2>Geography</h2>
+                            <ul>
+                                <li>Mumbai was originally an archipelago of seven islands.</li>
+                                <li>It is located on the western coast of India by the Arabian Sea.</li>
+                                <li>Features a natural deep-water harbor.</li>
+                            </ul>
+
+                            <h2>Climate</h2>
+                            <ul>
+                                <li>The climate is tropical, wet, and dry.</li>
+                                <li>Experiences heavy rainfall during the southwest monsoon (June to September).</li>
+                                <li>Summers are hot and humid, while winters are mild.</li>
+                            </ul>
+
+                            <h2>Economy</h2>
+                            <ul>
+                                <li>Houses India's most important financial institutions like RBI, BSE, and NSE.</li>
+                                <li>Headquarters for many top Indian conglomerates and multinational corporations.</li>
+                                <li>The heart of the Hindi film and television industry, popularly known as Bollywood.</li>
+                            </ul>
+
+                            <h2>Languages</h2>
+                            <ul>
+                                <li>Marathi is the official and most widely spoken regional language.</li>
+                                <li>Hindi, English, and Gujarati are also extensively used.</li>
+                                <li>A unique local dialect known as "Bambaiya Hindi" is popular on the streets.</li>
+                            </ul>
+
+                            <h2>Infrastructure & Transit</h2>
+                            <ul>
+                                <li>The Mumbai Suburban Railway (local trains) is the lifeline of the city.</li>
+                                <li>Features modern marvels like the Bandra-Worli Sea Link and a growing Metro network.</li>
+                                <li>Chhatrapati Shivaji Maharaj International Airport is one of the busiest in the country.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="img-slot img-slot-tall">
+                         <!-- HINT: Insert an authentic, high-quality photograph or video of the Mumbai Skyline. Avoid AI-generated artifacts. -->
+                        <img src="images/skyline.avif" alt="Mumbai Skyline">
+                    </div>
+                </div>
+
+                <div class="pull-quote-wrap">
+                    <h2 id="quote">
+                        "Maharashtra is not just a state, it's an emotion. It is a place where millions come 
+                        with nothing but dreams in their eyes and hope in their hearts."
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="places">
+            <div class="wrapper">
+                <div class="section-kicker">Must Visit</div>
+                <h2 class="section-heading">Famous <em>Landmarks</em></h2>
+
+                <div class="cards-row">
+                    <label class="card" for="modal-gateway" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Gateway of India -->
+                            <img src="images/gate.jpg" alt="Gateway of India">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Gateway of India</h3>
+                            <p class="card-text">An iconic arch monument overlooking the Arabian Sea, built during the British Raj.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-marinedrive" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Marine Drive / Queen's Necklace -->
+                            <img src="images/marine6.jpg" alt="Marine Drive">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag urban">Urban</span>
+                            <h3 class="card-title">Marine Drive</h3>
+                            <p class="card-text">A 3.6-kilometer-long boulevard along the coast, famously known as the Queen's Necklace.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-csmt" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of CSMT Station -->
+                            <img src="images/csmt7.webp" alt="CSMT">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Chhatrapati Shivaji Maharaj Terminus</h3>
+                            <p class="card-text">A historic railway station and UNESCO World Heritage Site featuring Victorian Gothic architecture.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-elephanta" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Elephanta Caves -->
+                            <img src="images/ele6.jpg" alt="Elephanta Caves">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Elephanta Caves</h3>
+                            <p class="card-text">Ancient rock-cut cave temples dedicated to Lord Shiva, located on an island off the coast.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-sealink" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Bandra-Worli Sea Link -->
+                            <img src="images/ban6.avif" alt="Sea Link">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag urban">Urban</span>
+                            <h3 class="card-title">Bandra-Worli Sea Link</h3>
+                            <p class="card-text">An engineering marvel and cable-stayed bridge that reduces travel time across the bay.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-siddhivinayak" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Siddhivinayak Temple -->
+                            <img src="images/sids.jpeg" alt="Siddhivinayak">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag spiritual">Spiritual</span>
+                            <h3 class="card-title">Siddhivinayak Temple</h3>
+                            <p class="card-text">One of the richest and most famous temples dedicated to Lord Ganesha in Prabhadevi.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-hajiali" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Haji Ali Dargah -->
+                            <img src="images/haj6.png" alt="Haji Ali">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag spiritual">Spiritual</span>
+                            <h3 class="card-title">Haji Ali Dargah</h3>
+                            <p class="card-text">A picturesque mosque and tomb situated on an islet in the Arabian Sea.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-sgnp" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Sanjay Gandhi National Park / Kanheri Caves -->
+                            <img src="images/san4.jpg" alt="Sanjay Gandhi National Park">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag nature">Nature</span>
+                            <h3 class="card-title">Sanjay Gandhi National Park</h3>
+                            <p class="card-text">A unique protected forest within city limits, housing the ancient Kanheri rock-cut caves.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="culture">
+            <div class="wrapper">
+                <div class="section-kicker">Heritage & People</div>
+                <h2 class="section-heading">Culture of <em>Maharashtra</em></h2>
+                
+                <div class="culture-scroll-container">
+                    <div class="two-col flip">
+                        <div class="col-text">
+                            <h3>Festivals</h3>
+                            <p> Maharashtra's festival calendar is vibrant and secular, celebrating the traditions of its diverse population with unmatched energy.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Major Festivals</span>
+                                <ul>
+                                    <li>
+                                        <b>Ganesh Chaturthi:</b> The biggest festival in Mumbai. Enormous clay idols of Lord Ganesha are installed and worshipped, followed by grand immersion processions (Visarjan) at the beaches.
+                                    </li>
+                                    <li>
+                                        <b>Gudi Padwa:</b> The traditional Maharashtrian New Year, celebrated with colorful rangolis, hoisting of the Gudi, and cultural rallies.
+                                    </li>
+                                    <li>
+                                        <b>Diwali & Eid:</b> Celebrated with great enthusiasm, illuminating the city from local chawls to high-rises.
+                                    </li>
+                                    <li>
+                                        <b>Kala Ghoda Arts Festival:</b> An annual exhibition spanning nine days, transforming South Mumbai into a hub of art, theatre, and culture.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall forest">
+                            <!-- HINT: Authentic photograph of Ganesh Visarjan in Mumbai. -->
+                            <img src="images/gaj.webp" alt="Festival Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="col-text">
+                            <h3>Street Food & Cuisine</h3>
+                            <p>Maharashtra's food scene is a melting pot of cultures, famous worldwide for its fast, flavorful, and incredibly diverse street food.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Food Culture</span>
+                                <div>
+                                    <h4>Iconic Street Food</h4>
+                                    <ul>
+                                        <li><b>Vada Pav:</b> The quintessential Mumbai burger—spicy potato dumpling in a bread bun.</li>
+                                        <li><b>Pav Bhaji:</b> A spicy vegetable mash served with butter-soaked bread, originating from the city's textile mill workers.</li>
+                                        <li><b>Bombay Sandwich:</b> A multi-layered sandwich packed with veggies and green chutney.</li>
+                                        <li><b>Bhel Puri & Sev Puri:</b> Tangy, crunchy chaat snacks best enjoyed at beaches like Juhu or Girgaon Chowpatty.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>Regional Delicacies</h4>
+                                    <ul>
+                                        <li>Traditional Maharashtrian thalis, coastal Malvani seafood, and Parsi cafes serving Bun Maska and Irani Chai.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall amber">
+                            <!-- HINT: Authentic photograph of Vada Pav or Pav Bhaji stall. -->
+                            <img src="images/pav.jpg" alt="Food Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col flip">
+                        <div class="col-text">
+                            <h3>Entertainment & Cinema</h3>
+                            <p>As the birthplace of Indian cinema, Mumbai is driven by art, theatre, and the massive Hindi film industry.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Arts & Media</span>
+                                <ul>
+                                    <li>
+                                        <b>Bollywood:</b> The Hindi film industry produces hundreds of films annually, deeply influencing the city's pop culture, fashion, and lifestyle.
+                                    </li>
+                                    <li>
+                                        <b>Marathi Theatre:</b> A strong, historic tradition of regional theatre with dedicated venues like Shivaji Mandir.
+                                    </li>
+                                    <li>
+                                        <b>Street Art:</b> Neighborhoods like Bandra are famous for vibrant murals depicting everything from Bollywood stars to social issues.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall forest">
+                             <!-- HINT: Authentic photograph of a classic cinema hall like Maratha Mandir or Bollywood street art. -->
+                            <img src="images/raj.webp" alt="Cinema Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="col-text">
+                            <h3>Music and Dance</h3>
+                            <p>The city's soundscape is a mix of traditional folk, classical traditions, and modern pop/Bollywood music.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Music & Dance</span>
+                                <ul>
+                                    <li>
+                                        <b>Koli Dance:</b> The traditional dance of the Kolis (fisherfolk), the original inhabitants of Mumbai, known for its rhythmic, wave-like movements.
+                                    </li>
+                                    <li>
+                                        <b>Lavani:</b> A traditional Maharashtrian song and dance performance known for its powerful rhythm and expressive beats.
+                                    </li>
+                                    <li>
+                                        <b>Contemporary Scene:</b> A thriving underground hip-hop scene (Gully Rap) and a huge classical music following at venues like the NCPA.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall amber">
+                             <!-- HINT: Authentic photograph of Koli dancers or a cultural performance. -->
+                            <img src="images/kol.jpg" alt="Music Culture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="colour-band">
+            <div style="max-width:700px;margin:0 auto;">
+                <h2>Experience the Spirit of Maharashtra</h2>
+                <p>From the heritage precincts of Fort to the glamorous suburbs of Bandra, Mumbai offers a high-octane blend of history, ambition, and community.</p>
+            </div>
+        </div>
+
+        <section class="section" id="timeline">
+            <div class="wrapper">
+                <div class="section-kicker">Through the Ages</div>
+                <h2 class="section-heading">Historical <em>Timeline</em></h2>
+
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1534</div>
+                        <div class="tl-title">Portuguese Era</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">The islands of Bombay were ceded to the Portuguese Empire by the Sultan of Gujarat.</p>
+                            <div class="mp-details">
+                                <h3>Portuguese Control</h3>
+                                <div class="box">
+                                    <ul>
+                                        <li>The Portuguese established forts and churches, naming the area "Bom Bahia" (Good Bay).</li>
+                                        <li>They constructed several notable structures, some remnants of which still exist in areas like Bandra and Vasai.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1661</div>
+                        <div class="tl-title">British Acquisition</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">Bombay was given to the English King Charles II as part of the dowry for Catherine of Braganza.</p>
+                            <div class="mp-details">
+                                <h2>The British Era & East India Company</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li>The British leased the islands to the East India Company.</li>
+                                        <li>The Hornby Vellard project in the 18th century merged the seven separate islands into a single landmass.</li>
+                                        <li>Bombay grew into a major seaport and trading hub.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1853</div>
+                        <div class="tl-title">First Passenger Train</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">India's first passenger railway line opened, connecting Bori Bunder in Bombay to Thane.</p>
+                            <div class="mp-details">
+                                <h2>Industrialization & Rail Network</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li>The introduction of railways spurred massive industrial growth.</li>
+                                        <li>Cotton mills proliferated, drawing migrants from across India and establishing Bombay's cosmopolitan character.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1995</div>
+                        <div class="tl-title">Renaming to Mumbai</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">The city's name was officially changed from Bombay to Mumbai.</p>
+                            <div class="mp-details">
+                                <h2>Modern Metropolis</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li>The name "Mumbai" is derived from the patron goddess Mumbadevi.</li>
+                                        <li>Today, it stands as India's financial hub, boasting major infrastructural projects and the prolific Bollywood industry.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="map-section">
+            <div class="wrapper">
+                <div class="section-kicker">Navigation</div>
+                <h2 class="section-heading">Geographical <em>Location</em></h2>
+
+                <div class="info-box" style="width: 100%;">
+                    <div class="info-box-title">
+                        <span class="dot"></span> Mumbai City Map
+                    </div>
+                    <div class="img-slot" style="height: 500px; margin-top: 20px; cursor: default;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.1160993077!2d72.74109995574581!3d19.082197838507853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-logo">Mumbai <em>City</em></div>
+                        <p class="footer-about">Exploring the cultural, commercial, and historical richness of India's City of Dreams.</p>
+                    </div>
+                    <div>
+                        <div class="footer-col-heading">Quick Links</div>
+                        <ul class="footer-list">
+                            <li><a href="#about">About Mumbai</a></li>
+                            <li><a href="#places">Landmarks</a></li>
+                            <li><a href="#culture">Culture</a></li>
+                        </ul>   
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2025 Mumbai Overview. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MODALS -->
+    
+    <input type="checkbox" id="modal-gateway" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-gateway" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-gateway" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Gateway of India -->
+                    <img src="images/gateway2.avif" alt="Gateway 1">
+                    <img src="images/gateway3.webp" alt="Gateway 2">
+                    <img src="images/gateway4.webp" alt="Gateway 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Gateway of India</b></h1>
+                <div class="box">
+                    <h3>History</h3>
+                    <ul>
+                        <li>Built to commemorate the landing of King George V and Queen Mary at Apollo Bunder on their visit to India in 1911.</li>
+                        <li>Designed by Scottish architect George Wittet.</li>
+                        <li>It was from here that the last British troops left India in 1948 following independence.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Architecture</h3>
+                    <ul>
+                        <li>An Indo-Saracenic architectural marvel.</li>
+                        <li>Constructed from yellow basalt and reinforced concrete.</li>
+                        <li>Features intricate latticework and a central dome spanning 48 feet in diameter.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-marinedrive" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-marinedrive" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-marinedrive" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Marine Drive -->
+                    <img src="images/marine.jpg" alt="Marine Drive 1">
+                    <img src="images/marine2.avif" alt="Marine Drive 2">
+                    <img src="images/marine3.webp" alt="Marine Drive 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Marine Drive</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>A 3.6 km long, C-shaped six-lane concrete road along the coast, which is a natural bay.</li>
+                        <li>Links Nariman Point to Babulnath and Malabar Hill.</li>
+                        <li>Known as the Queen's Necklace because, when viewed at night from an elevated point, the street lights resemble a string of pearls.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Culture & Tourism</h3>
+                    <ul>
+                        <li>A favorite spot for morning walks, sunset viewing, and late-night strolls.</li>
+                        <li>Lined with beautiful Art Deco buildings, part of a UNESCO World Heritage site ensemble.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-csmt" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-csmt" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-csmt" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of CSMT Station -->
+                    <img src="images/csmt.webp" alt="CSMT 1">
+                    <img src="images/csmt2.jpeg" alt="CSMT 2">
+                    <img src="images/csmt4.jpg" alt="CSMT 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Chhatrapati Shivaji Maharaj Terminus</b></h1>
+                <div class="box">
+                    <h3>History & Significance</h3>
+                    <ul>
+                        <li>Formerly known as Victoria Terminus (VT), designed by Frederick William Stevens.</li>
+                        <li>A UNESCO World Heritage Site reflecting Victorian Italianate Gothic Revival architecture mixed with traditional Indian motifs.</li>
+                        <li>Serves as the headquarters of the Central Railways and is one of the busiest railway stations in India.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-elephanta" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-elephanta" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-elephanta" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of Elephanta Caves -->
+                    <img src="images/ele.jpg" alt="Elephanta 1">
+                    <img src="images/ele2.jpg" alt="Elephanta 2">
+                    <img src="images/ele4.avif" alt="Elephanta 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Elephanta Caves</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Located on Elephanta Island (Gharapuri), about 10 km east of Mumbai.</li>
+                        <li>A collection of cave temples predominantly dedicated to the Hindu god Shiva.</li>
+                        <li>A UNESCO World Heritage site known for its stunning rock-cut sculptures, including the massive Trimurti (three-faced Shiva).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-sealink" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-sealink" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-sealink" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of Bandra-Worli Sea Link -->
+                    <img src="images/band4.webp" alt="Sea Link 1">
+                    <img src="images/band5.jpg" alt="Sea Link 2">
+                    <img src="images/band3.jpg" alt="Sea Link 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Bandra-Worli Sea Link</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Officially known as the Rajiv Gandhi Sea Link.</li>
+                        <li>A modern engineering marvel; an 8-lane, cable-stayed bridge over the Mahim Bay.</li>
+                        <li>Drastically reduced travel time between the western suburbs (Bandra) and South Mumbai (Worli).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-siddhivinayak" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-siddhivinayak" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-siddhivinayak" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of Siddhivinayak -->
+                    <img src="images/sid.jpg" alt="Siddhivinayak 1">
+                    <img src="images/sid2.jpeg" alt="Siddhivinayak 2">
+                    <img src="images/sid3.webp" alt="Siddhivinayak 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Siddhivinayak Temple</b></h1>
+                <div class="box">
+                    <h3>Religious Significance</h3>
+                    <ul>
+                        <li>A highly revered Hindu temple dedicated to Lord Shri Ganesha, located in Prabhadevi.</li>
+                        <li>Built in 1801, it is now one of the richest and most visited temples in India.</li>
+                        <li>Frequented by politicians, Bollywood stars, and everyday devotees seeking blessings for new ventures.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-hajiali" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-hajiali" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-hajiali" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of Haji Ali -->
+                    <img src="images/haj.jpg" alt="Haji Ali 1">
+                    <img src="images/haj2.jpg" alt="Haji Ali 2">
+                    <img src="images/haj3.jpg" alt="Haji Ali 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Haji Ali Dargah</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>A famous mosque and dargah (tomb) located on an islet off the coast of Worli.</li>
+                        <li>Houses the tomb of the Muslim saint Pir Haji Ali Shah Bukhari.</li>
+                        <li>Accessible only during low tide via a narrow causeway.</li>
+                        <li>A brilliant example of Indo-Islamic architecture.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-sgnp" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-sgnp" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-sgnp" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                     <!-- HINT: Authentic photos of Sanjay Gandhi National Park / Kanheri Caves -->
+                    <img src="images/san.jpg" alt="SGNP 1">
+                    <img src="images/san2.jpg" alt="SGNP 2">
+                    <img src="images/san3.jpg" alt="SGNP 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Sanjay Gandhi National Park</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>One of the few national parks situated entirely within city limits, spread over 87 sq km.</li>
+                        <li>Acts as the lungs of the city, providing a vital green cover.</li>
+                        <li>Home to diverse flora and fauna, including a notable population of leopards.</li>
+                        <li>Also houses the 2,000-year-old Kanheri Caves, carved out of basalt rock by Buddhist monks.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop">↑</button>
+    <!-- ═══════════════════════════════════════════════
+         MODAL JAVASCRIPT (Beginner-Friendly)
+         Replaces the old CSS checkbox toggle system.
+    ═══════════════════════════════════════════════ -->
+    <script src="mumbai.js"></script>
+
+
+
+</body>
+</html>
