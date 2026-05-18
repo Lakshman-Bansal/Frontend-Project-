@@ -1,2 +1,8 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 videos/ filter=lfs diff=lfs merge=lfs -text
+videos/PB[[:space:]]drone[[:space:]]shots.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/about[[:space:]]india[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/frontpage[[:space:]]drone.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/india[[:space:]]drone[[:space:]]shot[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/MP[[:space:]][[:space:]]background[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/PB[[:space:]]background[[:space:]]video.mp4 filter=lfs diff=lfs merge=lfs -text
