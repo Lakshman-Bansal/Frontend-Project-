@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <html lang="en">
@@ -1244,4 +1245,3135 @@
     <script src="punjab.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Punjab</title>
+    <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  TYPOGRAPHY SYSTEM — CHANGED                                 ║
+    ║  Cinzel        → Main headings  (royal, heritage feel)       ║
+    ║  Playfair Display → Subheadings, italic highlights, quotes   ║
+    ║  Roboto        → Body text, buttons, nav, UI labels          ║
+    ╚══════════════════════════════════════════════════════════════╝
+    -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ─────────────────────────────────────────────
+           COLOUR PALETTE  (light, warm, colourful)
+        ───────────────────────────────────────────── */
+        :root {
+
+            /* ─────────────────────────────────────────────
+               NEW COLOR PALETTE (Sophisticated Blues)
+            ───────────────────────────────────────────── */
+
+            /* Base adjustments for the new cohesive theme */
+
+            /* Mapping original semantic colors to the new palette */
+
+            /* ── CHANGED: three-font typography system ── */
+            --font-heading: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            --font-subhead: 'Playfair Display', Georgia, serif;
+            --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
+
+            /* keep --font-display aliased so no other property breaks */
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #ffffff;
+            color: rgb(17, 24, 39);
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-weight: 400;
+            /* CHANGED → Roboto reads best at 400, not 300 */
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+
+        /* ─── KEYFRAMES ─── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(36px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes gentleBob {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes colorCycle {
+            0% {
+                border-color: rgb(14, 165, 233);
+            }
+
+            33% {
+                border-color: rgb(245, 158, 11);
+            }
+
+            66% {
+                border-color: rgb(5, 150, 105);
+            }
+
+            100% {
+                border-color: rgb(14, 165, 233);
+            }
+        }
+
+        @keyframes marqueeScroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ─── NAVBAR ─── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 52px;
+            background: rgba(250, 247, 240, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(240, 232, 216, 0.8);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            /* CHANGED → Cinzel */
+            font-size: 1.2rem;
+            /* slightly smaller — Cinzel runs wide */
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            /* CHANGED → Cinzel needs breathing room */
+            color: rgb(17, 24, 39);
+        }
+
+        .nav-logo em {
+            color: rgb(5, 150, 105);
+            font-style: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 34px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            /* CHANGED → tighter caps tracking */
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+            transition: color 0.25s;
+
+        }
+
+
+
+        .nav-links a:hover {
+            color: rgb(17, 24, 39);
+        }
+
+
+        /* Navbar Clickable Calendar Styling */
+        .nav-calendar {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+            background: transparent;
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            border-radius: 5px;
+            padding: 4px 8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-calendar:hover,
+        .nav-calendar:focus {
+            border-color: rgb(17, 24, 39);
+            color: rgb(17, 24, 39);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Ensures the calendar icon inside the input is clickable */
+        ::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+        }
+
+
+        /* ════════════════════════════════════════════
+           HERO — VIDEO BACKGROUND
+        ════════════════════════════════════════════ */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 130px 32px 80px;
+        }
+
+        /* ════════════════════════════════════════════════════
+           🎬  VIDEO BACKGROUND — HOW TO ADD YOUR VIDEO
+           ════════════════════════════════════════════════════
+           STEP 1: Delete the <div class="hero-video-slot"> block below.
+           STEP 2: Paste this right inside <section class="hero">
+                   as its FIRST child:
+
+               <video class="hero-video"
+                      autoplay muted loop playsinline
+                      poster="your-cover-image.jpg">
+                   <source src="[PLACEHOLDER_VIDEO_URL]"  type="video/mp4">
+                   <source src="[PLACEHOLDER_VIDEO_URL]" type="video/webm">
+               </video>
+
+           STEP 3: Keep the <div class="hero-overlay"> — it adds the
+                   warm colour tint over the video. Tweak the opacity
+                   values inside .hero-overlay to make it lighter/darker.
+           ════════════════════════════════════════════════════ */
+
+        /* Applied to your real <video> element once added */
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Placeholder shown until you add the real video */
+        .hero-video-slot {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg,
+                    #b3e5fc 0%, #81d4fa 20%, #4fc3f7 42%,
+                    #29b6f6 60%, #03a9f4 78%, #0288d1 100%);
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video-slot-inner {
+            border: 2px dashed rgba(28, 28, 28, 0.5);
+            border-radius: 16px;
+            padding: 28px 44px;
+            text-align: center;
+            animation: colorCycle 4s linear infinite, gentleBob 4s ease-in-out infinite;
+        }
+
+        .hero-video-slot-inner .vicon {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .hero-video-slot-inner p {
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(250, 250, 255, 0.8);
+            margin-top: 4px;
+        }
+
+        /* Warm tint overlay on top of video — lightened for video clarity */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(2, 136, 209, 0.15) 0%,
+                    rgba(1, 87, 155, 0.25) 55%,
+                    rgba(250, 247, 240, 0.55) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(28, 28, 28, 0.22);
+            border: 1px solid rgba(28, 28, 28, 0.48);
+            backdrop-filter: blur(8px);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            /* CHANGED → Roboto */
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            /* CHANGED → wide-tracked small caps feel */
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 26px;
+        }
+
+        .hero-title {
+            color: rgb(255, 255, 255);
+            font-family: var(--font-heading);
+            /* CHANGED → Cinzel — royal, heritage feel */
+            font-size: clamp(2.8rem, 7.5vw, 6rem);
+            /* CHANGED → slightly smaller, Cinzel is wider */
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            /* CHANGED → Cinzel needs extra tracking */
+            color: #fff;
+            line-height: 1.05;
+            text-shadow: 0 4px 32px rgba(0, 0, 0, 0.22);
+            margin-bottom: 14px;
+        }
+
+        /* CHANGED → "Pradesh" uses Playfair Display italic for contrast */
+        .hero-title em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgb(253, 230, 138);
+        }
+
+        /* CHANGED → Playfair Display italic for the subtitle tagline */
+        .hero-tagline {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.35rem;
+            letter-spacing: 0.01em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 28px;
+        }
+
+        /* CHANGED → Roboto for readable body description */
+        .hero-desc {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.9;
+            color: rgba(250, 250, 255, 0.8);
+            max-width: 560px;
+            margin: 0 auto 42px;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* CHANGED → Roboto for both buttons */
+        .btn-solid {
+            padding: 13px 36px;
+            background: rgb(245, 158, 11);
+            color: rgb(17, 24, 39);
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .btn-solid:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-ghost {
+            padding: 13px 36px;
+            background: rgba(28, 28, 28, 0.18);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            border-radius: 50px;
+            border: 1px solid rgba(28, 28, 28, 0.48);
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.25s;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(28, 28, 28, 0.32);
+        }
+
+        /* CHANGED → Roboto for small UI label */
+
+
+        /* ─── STATS STRIP ─── */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: rgb(255, 255, 255);
+            border-top: 3px solid rgb(254, 240, 138);
+            border-bottom: 3px solid rgb(254, 240, 138);
+        }
+
+        .stat-strip-item {
+            padding: 36px 24px;
+            text-align: center;
+            border-right: 1px solid rgb(254, 240, 138);
+            animation: fadeUp 0.7s ease both;
+            position: relative;
+        }
+
+        .stat-strip-item:last-child {
+            border-right: none;
+        }
+
+        .stat-strip-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 16px;
+            right: 16px;
+            height: 3px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .stat-strip-item:nth-child(1)::before {
+            background: rgb(14, 165, 233);
+        }
+
+        .stat-strip-item:nth-child(2)::before {
+            background: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3)::before {
+            background: rgb(5, 150, 105);
+        }
+
+        .stat-strip-item:nth-child(4)::before {
+            background: rgb(249, 115, 22);
+        }
+
+        .stat-strip-item:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .stat-strip-item:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+        .stat-strip-item:nth-child(4) {
+            animation-delay: .3s;
+        }
+
+        /* CHANGED → Cinzel for stat numbers — authoritative, elegant */
+        .stat-num {
+            font-family: var(--font-heading);
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            display: block;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-strip-item:nth-child(1) .stat-num {
+            color: rgb(14, 165, 233);
+        }
+
+        .stat-strip-item:nth-child(2) .stat-num {
+            color: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3) .stat-num {
+            color: rgb(5, 150, 105);
+        }
+
+        .stat-strip-item:nth-child(4) .stat-num {
+            color: rgb(249, 115, 22);
+        }
+
+        /* CHANGED → Roboto for UI labels */
+        .stat-label {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+        }
+
+
+        /* --- culture ---- */
+
+        /* 1. Constrain the main section */
+        #culture {
+            padding: 90px 0;
+            background: #ffffff;
+        }
+
+        /* 2. Create the scrollable "Viewport" */
+        #culture .wrapper {
+            max-height: 740px;
+            /* Adjust this height to your preference */
+            overflow-y: auto;
+            /* Enables vertical scrolling */
+            overflow-x: hidden;
+            /* Prevents accidental horizontal shifting */
+            padding-right: 15px;
+            /* Space for the scrollbar so it doesn't overlap text */
+
+            /* Smooth scrolling behavior */
+            scroll-behavior: smooth;
+
+            /* 3. Hide the div elements that are outside the "scroll box" */
+            clip-path: inset(0 0 0 0);
+            position: relative;
+        }
+
+
+        .culture-scroll-container {
+            max-height: 600px;
+            overflow-y: scroll;
+            padding: 20px;
+            border: 1px solid rgb(254, 240, 138);
+            /* Optional: defines the scroll area visually */
+            border-radius: 15px;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+
+
+        /* ─── LAYOUT ─── */
+
+        .wrapper {
+            max-width: 1620px;
+            margin: 0 auto;
+            padding: 0 44px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+
+        /* CHANGED → Roboto for all small section kicker labels */
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            /* CHANGED → wider tracking for label clarity */
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+            margin-bottom: 14px;
+        }
+
+        .section-kicker::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: rgb(5, 150, 105);
+            border-radius: 2px;
+        }
+
+        /* CHANGED → Cinzel for main section headings */
+        .section-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+            /* CHANGED → adjusted for Cinzel's width */
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            /* CHANGED → Cinzel tracking */
+            color: rgb(17, 24, 39);
+            line-height: 1.2;
+            margin-bottom: 36px;
+        }
+
+        /* CHANGED → Playfair Display italic for the em word inside headings */
+        .section-heading em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: rgb(5, 150, 105);
+        }
+
+        hr.fancy {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, rgb(186, 230, 253), rgb(253, 230, 138), rgb(110, 231, 183));
+            border-radius: 2px;
+        }
+
+        /* ─── TEXT / IMAGE SLOT STYLES ─── */
+        .txt-slot {
+            border-left: 3px solid rgb(14, 165, 233);
+            background: rgb(224, 242, 254);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px 18px 20px;
+            margin-bottom: 22px;
+            transition: border-color .3s, background .3s;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 12px;
+        }
+
+
+
+        /* CHANGED → Roboto for placeholder tag labels */
+        .txt-slot-tag {
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgb(14, 165, 233);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+
+
+        /* CHANGED → Roboto italic for placeholder hint text */
+        .txt-slot p {
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 300;
+            color: rgb(55, 65, 81);
+            font-style: italic;
+            margin: 0 !important;
+        }
+
+        .img-slot {
+            background: linear-gradient(135deg, rgb(224, 242, 254), rgb(209, 250, 229));
+            border: 2px dashed rgba(56, 189, 248, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        .img-slot .ic {
+            font-size: 2rem;
+            animation: gentleBob 4s ease-in-out infinite;
+        }
+
+        /* CHANGED → Roboto for image slot labels */
+        .img-slot .il {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+        }
+
+        /* CHANGED → Roboto light for image slot hint */
+        .img-slot .ih {
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 300;
+            color: rgb(75, 85, 99);
+        }
+
+        .img-slot-tall {
+            height: 420px;
+        }
+
+        .img-slot-medium {
+            height: 260px;
+        }
+
+        .img-slot.amber {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border-color: rgba(245, 158, 11, .3);
+        }
+
+
+        .img-slot.amber .il {
+            color: rgb(245, 158, 11);
+        }
+
+        .img-slot.coral {
+            background: linear-gradient(135deg, rgb(255, 237, 213), rgb(253, 186, 116));
+            border-color: rgba(224, 112, 82, .3);
+        }
+
+
+
+        .img-slot.coral .il {
+            color: rgb(249, 115, 22);
+        }
+
+        .img-slot.forest {
+            background: linear-gradient(135deg, rgb(236, 253, 245), rgb(52, 211, 153));
+            border-color: rgba(22, 101, 52, .25);
+        }
+
+
+
+        .img-slot.forest .il {
+            color: rgb(6, 78, 59);
+        }
+
+        .img-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Shows the FULL image, may leave some empty space if aspect ratios differ */
+            border-radius: 12px;
+            /* Optional: matches the aesthetic of your site */
+            display: block;
+            padding: 0 !important;
+        }
+
+        /* ─── ABOUT GRID ─── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        /* CHANGED → Removed scrolling from parent, added to individual txt-slot divs */
+
+        /* CHANGED → Roboto for all body/paragraph text */
+        .about-text p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.95;
+            color: rgb(17, 24, 39);
+            margin-bottom: 22px;
+        }
+
+        /* ─── PULL QUOTE ─── */
+        .pull-quote-wrap {
+            background: linear-gradient(135deg, rgb(224, 242, 254), rgb(209, 250, 229));
+            border-radius: 20px;
+            padding: 52px 60px;
+            position: relative;
+            overflow: hidden;
+            margin: 60px 0;
+        }
+
+        .pull-quote-wrap::before {
+            content: '\201C';
+            font-family: var(--font-subhead);
+            /* CHANGED → Playfair Display */
+            font-size: 10rem;
+            color: rgba(56, 189, 248, 0.18);
+            position: absolute;
+            top: -20px;
+            left: 24px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        /* CHANGED → Playfair Display italic for the pull quote */
+        .pull-quote-wrap blockquote {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.6rem;
+            letter-spacing: 0.01em;
+            color: rgb(17, 24, 39);
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        /* CHANGED → Roboto for the citation */
+        .pull-quote-wrap cite {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: rgb(55, 65, 81);
+        }
+
+
+
+        /* ---- modals---- */
+        /* ════ PURE CSS MODAL (CHECKBOX HACK) ════ */
+        /* Hide the actual checkboxes */
+        .modal-toggle {
+            display: none;
+        }
+
+        /* The dark, blurred background overlay */
+        .css-modal {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(28, 25, 23, 0.7);
+            /* Dark charcoal tint */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        /* Show the modal when the checkbox is checked */
+        .css-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* An invisible label that covers the background to close the modal when clicking outside */
+        .modal-close-bg {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        /* The actual white pop-out box */
+        .modal-content {
+            position: relative;
+            background: #ffffff;
+            width: 90%;
+            max-width: 1000px;
+            height: 75vh;
+            /* NEW: Locks the height to 75% of the screen height */
+            max-height: 600px;
+            /* NEW: Caps the size so it doesn't get too massive */
+            min-height: 400px;
+            /* Keeps your original minimum height */
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 10000;
+        }
+
+        /* Make the box pop beautifully when opened */
+        .css-modal.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        /* Left side: Image */
+        .modal-left {
+            flex: 1;
+            background: rgb(224, 242, 254);
+        }
+
+        .modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Slideshow styles */
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            opacity: 0;
+            animation: slideshow 12s infinite;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slideshow img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes slideshow {
+            0% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Right side: Text details */
+        .modal-right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* CHANGED: Starts text at the top so it doesn't cut off */
+            overflow-y: auto;
+            /* NEW: Makes the description scrollable */
+        }
+
+
+
+        .modal-right h3 {
+            font-family: var(--font-subhead);
+            font-size: 2.2rem;
+            color: rgb(17, 24, 39);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .modal-right p {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: rgb(55, 65, 81);
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        /* The "X" Close Button */
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #f1f5f9;
+            color: rgb(17, 24, 39);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            z-index: 10;
+        }
+
+        .modal-close-btn:hover {
+            background: #e2e8f0;
+            color: rgb(17, 24, 39);
+
+        }
+
+        /* Responsive: Stack image on top of text for mobile */
+        @media (max-width: 900px) {
+            .modal-content {
+                flex-direction: column;
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+
+            .modal-left {
+                min-height: 300px;
+            }
+
+            .modal-right {
+                padding: 30px;
+            }
+        }
+
+        /* ─── CARDS ─── */
+        .cards-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+
+            /* ─── FULL WIDTH BLEED ─── */
+            width: 100vw;
+            /* Force width to 100% of the viewport */
+            position: relative;
+            left: 50%;
+            /* Move to center */
+            right: 50%;
+            margin-left: -50vw;
+            /* Pull back by half the viewport width */
+            margin-right: -50vw;
+
+            /* ─── PADDING & SCROLLING ─── */
+            padding: 20px 44px 40px;
+            /* Match side padding to your wrapper (44px) */
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            /* Smooth scrolling for iOS */
+
+            /* Ensure the row itself doesn't hide the "emerging" card */
+            overflow-y: visible !important;
+            overflow-x: auto;
+        }
+
+        #places {
+            overflow: visible;
+        }
+
+        .cards-row .card {
+            flex: 0 0 400px;
+            /* Cards will be exactly 320px wide */
+            scroll-snap-align: start;
+            /* Snaps to the left edge of the screen */
+            margin-bottom: 10px;
+            /* Prevents shadow clipping */
+        }
+
+
+        /* ─────────────────────────────────────────────────────────────
+   ENHANCED POP-OUT CARD SYSTEM
+   Replaces your existing .card and .card:hover
+   ───────────────────────────────────────────────────────────── */
+
+        .card {
+            /* 1. LAYOUT: Keep your existing dimensions */
+            min-width: 400px;
+            flex: 0 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(17, 24, 39, 0.1);
+
+            /* 2. INITIAL STATE: Crucial for z-index to work */
+            position: relative;
+            z-index: 1;
+
+            /* 3. LOAD-IN: Keep your original slide-up animation */
+            animation: fadeUp 0.7s ease both;
+        }
+
+
+
+        .card:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+
+        .card-img-slot {
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-img-slot img {
+            width: 100%;
+            height: 450px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .card-img-slot .ic {
+            font-size: 2rem;
+        }
+
+        .card-img-slot .il {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+        }
+
+        .card-body {
+            padding: 22px 24px 26px;
+        }
+
+        /* CHANGED → Roboto for card tags (UI labels) */
+        .card-tag {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            border: 1px solid currentColor;
+        }
+
+        /* ─── CATEGORY TAG COLORS ─── */
+
+        /* Spiritual: Warm Amber/Gold */
+        .card-tag.spiritual {
+            background: rgb(255, 248, 225);
+            color: rgb(245, 158, 11);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        /* Heritage: Deep Prussian Blue */
+        .card-tag.heritage {
+            background: rgb(232, 240, 254);
+            color: rgb(2, 62, 125);
+            border-color: rgba(2, 62, 125, 0.3);
+        }
+
+        /* Nature: Fresh Emerald/Teal */
+        .card-tag.nature {
+            background: rgb(209, 250, 229);
+            color: rgb(5, 150, 105);
+            border-color: rgba(5, 150, 105, 0.3);
+        }
+
+        /* Cultural: Vibrant Coral/Orange */
+        .card-tag.cultural {
+            background: rgb(255, 237, 213);
+            color: rgb(249, 115, 22);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        /* CHANGED → Playfair Display for card titles */
+        .card-title {
+            font-family: var(--font-subhead);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        /* CHANGED → Roboto for card body text */
+        .card-text {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgb(55, 65, 81);
+            line-height: 1.8;
+        }
+
+        /* ─── TWO-COL ─── */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .two-col.flip {
+            direction: rtl;
+        }
+
+        .two-col.flip>* {
+            direction: ltr;
+        }
+
+        /* CHANGED → Playfair Display for sub-section headings */
+        .col-text h3 {
+            font-family: var(--font-subhead);
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        /* CHANGED → Roboto for body paragraphs */
+        .col-text p {
+            font-family: var(--font-body);
+            font-size: 0.97rem;
+            font-weight: 400;
+            color: rgb(17, 24, 39);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* CHANGED → Roboto for inline link */
+        .read-more {
+            display: inline-block;
+            margin-top: 8px;
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(5, 150, 105);
+            text-decoration: none;
+            border-bottom: 1px solid rgb(5, 150, 105);
+            padding-bottom: 2px;
+            transition: color .25s, border-color .25s;
+        }
+
+        .read-more:hover {
+            color: rgb(17, 24, 39);
+            border-color: rgb(17, 24, 39);
+        }
+
+        /* ─── COLOUR BAND ─── */
+        .colour-band {
+            background: linear-gradient(120deg, rgb(5, 150, 105) 0%, #0d6e85 60%, #1e40af 100%);
+            padding: 72px 44px;
+            text-align: center;
+        }
+
+        /* CHANGED → Cinzel for the full-width band heading */
+        .colour-band h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        /* CHANGED → Roboto for band body text */
+        .colour-band p {
+            font-family: var(--font-body);
+            font-weight: 300;
+            color: rgba(28, 28, 28, .78);
+            font-size: 1rem;
+            max-width: 580px;
+            margin: 0 auto 36px;
+            line-height: 1.85;
+        }
+
+        /* ─── HORIZONTAL TIMELINE ─── */
+        .timeline-horizontal {
+            position: relative;
+            margin-top: 20px;
+        }
+
+        /* --- Step buttons row --- */
+        .tl-steps {
+            display: flex;
+            position: relative;
+            gap: 0;
+        }
+
+        /* Horizontal connecting line behind the dots */
+        .tl-steps::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 24px;
+            right: 24px;
+            height: 3px;
+            background: linear-gradient(to right, rgb(2, 62, 125), rgb(14, 165, 233), rgb(0, 40, 85), rgb(14, 165, 233));
+            border-radius: 2px;
+            z-index: 0;
+        }
+
+        /* Each clickable step */
+        .tl-step {
+            flex: 1;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 0 8px 18px;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.25s ease;
+        }
+
+        .tl-step:hover {
+            transform: translateY(-3px);
+        }
+
+        /* The dot on the horizontal line */
+        .tl-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: rgb(2, 62, 125);
+            box-shadow: 0 0 0 2px rgb(2, 62, 125);
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex-shrink: 0;
+        }
+
+        .tl-step:nth-child(2) .tl-dot {
+            background: rgb(14, 165, 233);
+            box-shadow: 0 0 0 2px rgb(14, 165, 233);
+        }
+
+        .tl-step:nth-child(3) .tl-dot {
+            background: rgb(0, 40, 85);
+            box-shadow: 0 0 0 2px rgb(0, 40, 85);
+        }
+
+        .tl-step:nth-child(4) .tl-dot {
+            background: rgb(14, 165, 233);
+            box-shadow: 0 0 0 2px rgb(14, 165, 233);
+        }
+
+        .tl-step:nth-child(5) .tl-dot {
+            background: rgb(245, 158, 11);
+            box-shadow: 0 0 0 2px rgb(245, 158, 11);
+        }
+
+        .tl-step:nth-child(6) .tl-dot {
+            background: rgb(5, 150, 105);
+            box-shadow: 0 0 0 2px rgb(5, 150, 105);
+        }
+
+        .tl-step:nth-child(7) .tl-dot {
+            background: rgb(249, 115, 22);
+            box-shadow: 0 0 0 2px rgb(249, 115, 22);
+        }
+
+        .tl-step:nth-child(8) .tl-dot {
+            background: rgb(139, 92, 246);
+            box-shadow: 0 0 0 2px rgb(139, 92, 246);
+        }
+
+        /* Active step styling */
+        .tl-step[aria-selected="true"] .tl-dot {
+            transform: scale(1.4);
+            box-shadow: 0 0 0 3px currentColor, 0 0 14px rgba(14, 165, 233, 0.4);
+        }
+
+        .tl-step[aria-selected="true"] .tl-title {
+            color: rgb(2, 62, 125);
+        }
+
+        /* Year label */
+        .tl-year {
+            font-family: var(--font-body);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            color: rgb(2, 62, 125);
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* Event title in the step button */
+        .tl-title {
+            font-family: var(--font-subhead);
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: rgb(55, 65, 81);
+            line-height: 1.3;
+            text-align: center;
+            transition: color 0.3s;
+        }
+
+        /* --- Content panels area --- */
+        .tl-panels {
+            margin-top: 30px;
+            position: relative;
+            min-height: 200px;
+        }
+
+        .tl-panel {
+            display: none;
+            animation: fadeUp 0.5s ease both;
+        }
+
+        .tl-panel.active {
+            display: block;
+        }
+
+        /* Text inside the panel */
+        .tl-panel>.tl-text {
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: rgb(55, 65, 81);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        /* ════════════════════════════════════════════
+           🎬  INLINE VIDEO SLOT
+        ════════════════════════════════════════════ */
+
+
+        /* ─── EXTRA / FREE-FORM ─── */
+        /* This targets the iframe specifically inside your map section */
+        #map-section .img-slot iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: none;
+            border-radius: 12px;
+            /* Matches the aesthetic of your cards */
+        }
+
+        /* Removes the placeholder icons/text since the map is now live */
+        #map-section .img-slot .ic,
+        #map-section .img-slot .il,
+        #map-section .img-slot .ih {
+            display: none;
+        }
+
+
+
+
+
+        .extra-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .info-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 30px;
+            border: 1px solid rgb(254, 240, 138);
+            transition: box-shadow .3s;
+        }
+
+        .info-box:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+        }
+
+        #map-section .info-box {
+            padding: 16px 15px;
+        }
+
+        /* NEW: Styled Mauryan history detail cards */
+        .mp-details {
+            background: linear-gradient(160deg, rgba(238, 245, 250, 0.95), rgba(251, 239, 226, 0.95));
+            border: 1px solid rgba(63, 117, 133, .15);
+            border-radius: 20px;
+            padding: 26px;
+            margin: 30px 0;
+            box-shadow: 0 12px 30px rgba(12, 74, 102, 0.12);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .mp-details h2,
+        .mp-details h3,
+        .mp-details h4 {
+            font-family: var(--font-subhead);
+            color: rgb(17, 24, 39);
+        }
+
+        .mp-details h2 {
+            margin-bottom: 16px;
+            font-size: clamp(1.6rem, 2.6vw, 2rem);
+            letter-spacing: 0.04em;
+        }
+
+        .mp-details .box {
+            background: rgb(244, 246, 252);
+            /* Light, readable background matching your theme */
+            border-radius: 14px;
+            border: 1px solid rgba(2, 62, 125, 0.15);
+            /* Subtle Teal border */
+            padding: 14px 16px;
+            margin: 10px 0;
+        }
+
+        .mp-details .box h3,
+        .mp-details .box h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: rgb(2, 62, 125);
+            /* Teal headers inside the box */
+        }
+
+        /* Added a rule for paragraphs inside the box to ensure readability */
+        .mp-details .box p {
+            color: rgb(55, 65, 81);
+            /* Slate gray text */
+            line-height: 1.7;
+        }
+
+        .mp-details .box ul {
+            list-style: disc;
+            margin-left: 1.25rem;
+            color: rgb(55, 65, 81);
+            /* Slate gray text */
+            line-height: 1.7;
+        }
+
+        .mp-details .box ul li {
+            margin-bottom: 6px;
+        }
+
+        /* CHANGED → Playfair Display for info box headings */
+        .info-box-title {
+            font-family: var(--font-subhead);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: rgb(17, 24, 39);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .info-box:nth-child(1) .dot {
+            background: rgb(14, 165, 233);
+        }
+
+        .info-box:nth-child(2) .dot {
+            background: rgb(245, 158, 11);
+        }
+
+        .info-box:nth-child(3) .dot {
+            background: rgb(5, 150, 105);
+        }
+
+        .info-box:nth-child(4) .dot {
+            background: rgb(249, 115, 22);
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            background: rgb(17, 24, 39);
+            padding: 60px 44px 28px;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 48px;
+        }
+
+        /* CHANGED → Cinzel for footer brand name */
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: rgb(255, 255, 255);
+            /* Solid White */
+            margin-bottom: 12px;
+        }
+
+        .footer-logo em {
+            font-family: var(--font-subhead);
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgb(129, 212, 250);
+            /* Soft Sky Blue accent */
+        }
+
+        /* CHANGED → Roboto light for footer description */
+        .footer-about {
+            font-family: var(--font-body);
+            font-size: .87rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.7);
+            /* Soft white for easy reading */
+            line-height: 1.85;
+            max-width: 270px;
+        }
+
+        /* CHANGED → Roboto for footer column headings (UI labels) */
+        .footer-col-heading {
+            font-family: var(--font-body);
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: rgb(129, 212, 250);
+            /* Soft Sky Blue */
+            margin-bottom: 16px;
+        }
+
+        .footer-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-list a {
+            font-family: var(--font-body);
+            text-decoration: none;
+            font-size: .87rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.7);
+            /* Soft white */
+            transition: color .25s;
+        }
+
+        .footer-list a:hover {
+            color: rgb(255, 255, 255);
+            /* Bright white on hover */
+        }
+
+        /* CHANGED → Roboto for copyright line */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            /* Subtle white border */
+            padding-top: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: var(--font-body);
+            font-size: .75rem;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            color: rgba(255, 255, 255, 0.5);
+            /* Dimmer white */
+        }
+
+        .colour-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .colour-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width:900px) {
+            .nav {
+                padding: 14px 22px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stat-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid,
+            .two-col,
+            .extra-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-width: 280px;
+            }
+
+            .cards-row {
+                grid-template-columns: 1fr;
+                padding-left: 22px;
+                /* Match your mobile wrapper padding */
+                padding-right: 22px;
+            }
+
+            .cards-row .card {
+                flex: 0 0 280px;
+                /* Slightly smaller cards for mobile */
+            }
+
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .gallery-grid .img-slot:nth-child(1) {
+                height: 280px;
+            }
+
+            .gallery-row-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .wrapper {
+                padding: 0 22px;
+            }
+
+            .pull-quote-wrap {
+                padding: 36px 28px;
+            }
+
+            /* CHANGED → smaller Cinzel sizes on mobile (font runs wide) */
+            .hero-title {
+                color: rgb(255, 255, 255);
+                font-size: clamp(2.2rem, 10vw, 3.5rem);
+                letter-spacing: 0.04em;
+            }
+
+            .section-heading {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+
+            .pull-quote-wrap blockquote {
+                font-size: 1.25rem;
+            }
+
+            .stat-num {
+                font-size: 2rem;
+            }
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            font-size: 20px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            display: none;
+            transition: all 0.3s ease;
+        }
+
+        #backToTop:hover {
+            background: #333;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <!-- ════ NAVBAR ════ -->
+        <nav class="nav">
+            <div class="nav-logo">Punjab <em></em></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Places</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#map-section">Location</a></li>
+                <li><input type="date" class="nav-calendar" title="Select a Date"></li>
+            </ul>
+        </nav>
+        <!-- ════════════════════════════════════════════════════
+     HERO  ←  DROP YOUR VIDEO BACKGROUND HERE
+════════════════════════════════════════════════════ -->
+        <section class="hero">
+            <video autoplay="" class="hero-video" loop="" muted="" playsinline="" poster="cover.jpg">
+                <source src="videos/PB background video.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">🌾   Land of Five Rivers</div>
+                <h1 class="hero-title">Punjab</h1>
+                <p class="hero-tagline">The Heart of India's Sikh Heritage and Agricultural Bounty</p>
+                <p class="hero-desc">A vibrant land known for its golden wheat fields, profound spiritual sites, martial
+                    history, and the unmatched warmth of its people.</p>
+                <div class="hero-cta-row">
+                    <a class="btn-solid" href="#places">Explore Places</a>
+                </div>
+            </div>
+        </section>
+        <!-- ════ STATS ════ -->
+        <div class="stat-strip">
+            <div class="stat-strip-item">
+                <span class="stat-num">50K+</span>
+                <span class="stat-label">Area km²</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">23</span>
+                <span class="stat-label">Districts</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">27.7M+</span>
+                <span class="stat-label">Population</span>
+            </div>
+            <div class="stat-strip-item">
+
+                <span class="stat-num">3</span>
+                <span class="stat-label">Major Rivers (Sutlej, Beas, Ravi)</span>
+            </div>
+        </div>
+        <!-- ════ ABOUT ════ -->
+        <section class="section" id="about">
+            <div class="wrapper">
+                <div class="section-kicker">About the State</div>
+                <h2 class="section-heading">India's <em>Breadbasket</em></h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Punjab — meaning "Land of Five Waters" — sits in the northwestern part of India. Known as
+                            the 'Granary of India', this fertile state is the heartland of the Sikh faith and boasts a
+                            rich, resilient history.
+                        </p>
+                        <div class="txt-slot">
+                            <h1>Punjab</h1>
+                            <h2>Geography</h2>
+                            <ul>
+                                <li>Punjab is strategically located in the northwestern part of India, serving as a
+                                    historical gateway to the Indian subcontinent.</li>
+                                <li>The state is predominantly a vast, fertile alluvial plain, making it one of the most
+                                    agriculturally rich regions in the world.</li>
+                                <li>Towards the northeast, the landscape gently rises to meet the Shivalik Hills,
+                                    forming a picturesque transition into the Himalayas.</li>
+                            </ul>
+                            <h2>Climate</h2>
+                            <ul>
+                                <li>The state experiences an extreme continental climate characterized by three distinct
+                                    seasons: a scorching summer, a humid monsoon, and a freezing winter.</li>
+                                <li>Summers (April to June) are intensely hot and dry, with temperatures frequently
+                                    soaring above 40°C (104°F).</li>
+                                <li>Winters (December to February) bring a sharp drop in temperature, often nearing
+                                    freezing point, accompanied by thick morning fogs that blanket the agricultural
+                                    fields.</li>
+                            </ul>
+                            <h2>Rivers</h2>
+                            <ul>
+                                <li>The name "Punjab" translates to "Land of Five Waters," historically referring to the
+                                    Jhelum, Chenab, Ravi, Sutlej, and Beas rivers.</li>
+                                <li>Following the 1947 partition, the present-day Indian state of Punjab is primarily
+                                    nourished by three of these majestic rivers: the Sutlej, the Beas, and the Ravi.
+                                </li>
+                                <li>These perennial rivers, supported by an extensive canal network, are the lifeblood
+                                    of the state's booming agricultural economy.</li>
+                            </ul>
+
+                            <h2>Language &amp; Demographics</h2>
+                            <ul>
+                                <li>Punjabi is the official language, written in the Gurmukhi script (standardized by
+                                    the second Sikh Guru, Guru Angad Dev Ji). It is celebrated for its rhythmic and
+                                    robust tonal quality.</li>
+                                <li>The state is the global center of the Sikh faith, and the population is known
+                                    worldwide for the core cultural tenets of Chardi Kala (eternal optimism) and Seva
+                                    (selfless service).</li>
+                                <li>Hindi and English are also widely spoken, especially in urban centers and among the
+                                    youth.</li>
+                            </ul>
+                            <h2>Economy &amp; Agriculture</h2>
+                            <ul>
+                                <li>Often hailed as the "Granary of India," Punjab produces a massive percentage of the
+                                    nation's wheat and rice, having been the epicenter of India's Green Revolution in
+                                    the 1960s.</li>
+                                <li>Beyond farming, the state has a strong industrial base. Ludhiana is a major
+                                    manufacturing hub for textiles, woolen garments, and bicycles.</li>
+                                <li>Jalandhar is internationally recognized for its production of high-quality sports
+                                    goods and surgical equipment.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="img-slot img-slot-tall" style="align-self: center;">
+                        <video autoplay="" loop="" muted="" playsinline="" poster="cover.jpg"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; display: block;">
+                            <!-- Add your video link below -->
+                            <source src="videos/PB drone shots.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- Pull quote -->
+            <div class="pull-quote-wrap">
+
+                <blockquote
+                    style="text-align: center; font-size: 1.7rem; line-height: 2.2; letter-spacing: 0.04em; padding: 20px 0;">
+                    “Punjab, home of warriors brave and bold, Stories of valor forever told,<br>
+                    Fields that shine like waves of gold.”
+                </blockquote>
+            </div>
+        </section>
+    </div>
+
+    <hr class="fancy" />
+    <!-- ════ ATTRACTIONS ════ -->
+    <section class="section" id="places">
+        <div class="wrapper">
+            <div class="section-kicker">Must Visit</div>
+            <h2 class="section-heading">Famous <em>Attractions</em></h2>
+            <div class="cards-row">
+                <!-- Card 1 -->
+                <div class="card" data-modal="modal-golden" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Golden Temple" src="images/golden temple 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag spiritual">Spiritual</span>
+                        <h3 class="card-title">Golden Temple</h3>
+                        <p class="card-text">The holiest Gurdwara of Sikhism, famous for its gilded facade, serene Amrit
+                            Sarovar, and the world's largest free community kitchen.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card" data-modal="modal-jallianwala" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Jallianwala Bagh" src="images/jallianwala bagh 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag heritage">Heritage</span>
+                        <h3 class="card-title">Jallianwala Bagh</h3>
+                        <p class="card-text">A historic public garden in Amritsar that serves as a poignant memorial for
+                            the peaceful gatherers massacred by British forces in 1919.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card" data-modal="modal-wagah" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Wagah-Attari Border" src="images/wagga border 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag heritage">Heritage</span>
+                        <h3 class="card-title">Wagah-Attari Border</h3>
+                        <p class="card-text">The international border dividing India and Pakistan, famous for the daily,
+                            high-energy Beating Retreat border ceremony.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card" data-modal="modal-virasat" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Virasat-e-Khalsa" src="images/virasat 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag spiritual">Cultural</span>
+                        <h3 class="card-title">Virasat-e-Khalsa</h3>
+                        <p class="card-text">A breathtaking museum in Anandpur Sahib celebrating 500 years of Sikh
+                            history and the monumental birth of the Khalsa.</p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card" data-modal="modal-qila" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Qila Mubarak" src="images/mubarak 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag heritage">Heritage</span>
+                        <h3 class="card-title">Qila Mubarak</h3>
+                        <p class="card-text">A majestic, ancient fortress in Bathinda with roots tracing back to the
+                            Kushan period, known as the site where Razia Sultana was imprisoned.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card" data-modal="modal-harike" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Harike Wetland" src="images/harike 1.jpeg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag nature">Nature</span>
+                        <h3 class="card-title">Harike Wetland</h3>
+                        <p class="card-text">The largest wetland in northern India, formed at the confluence of the Beas
+                            and Sutlej rivers, serving as a vital sanctuary for migratory birds.</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="card" data-modal="modal-partition" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Partition Museum" src="images/partition 1.webp" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag cultural">Cultural</span>
+                        <h3 class="card-title">Partition Museum</h3>
+                        <p class="card-text">Located in the historic Town Hall of Amritsar, this museum is dedicated to
+                            the millions impacted by the tragic 1947 partition of India and Pakistan.</p>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="card" data-modal="modal-sheesh" style="cursor: pointer;">
+                    <div class="card-img-slot">
+                        <img alt="Sheesh Mahal" src="images/sheesh mahal 1.jpg" />
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag heritage">Heritage</span>
+                        <h3 class="card-title">Sheesh Mahal</h3>
+                        <p class="card-text">The 'Palace of Mirrors' in Patiala, built by Maharaja Narinder Singh in
+                            1847, showcasing exquisite frescoes, mirror work, and a suspended bridge.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="fancy" />
+    <!-- ════ CULTURE ════ -->
+    <section class="section" id="culture">
+        <div class="wrapper">
+            <div class="section-kicker">Heritage &amp; People</div>
+            <h2 class="section-heading">Culture of <em>Punjab</em></h2>
+            <div class="culture-scroll-container">
+                <!-- Row 1 -->
+                <div class="two-col flip">
+                    <div class="col-text">
+                        <h3>Traditional Dance Forms</h3>
+                        <p>Punjab's dances are an expression of its agricultural roots and vibrant energy.</p>
+                        <div class="txt-slot">
+                            <span class="txt-slot-tag">✏️ DANCES</span>
+                            <ul>
+                                <li><b>Bhangra:</b> Originating as a celebratory harvest dance among farmers, Bhangra is
+                                    now a global phenomenon. It involves highly energetic, athletic movements, vibrant
+                                    turbans and kurta-chadras, and is always driven by the booming beats of the Dhol
+                                    drum.</li>
+                                <li><b>Giddha:</b> The female counterpart to Bhangra. It is a graceful yet wildly
+                                    energetic ring dance. Women form a circle, clap to a steady rhythm, and take turns
+                                    reciting Boliyan (folk couplets) that humorously detail domestic life, love, and
+                                    social issues.</li>
+                                <li><b>Jhumar &amp; Sammi:</b> Jhumar is a slower, more rhythmic dance performed by men,
+                                    often described as the "dance of ecstasy." Sammi is a traditional tribal dance of
+                                    women, characterized by a specific makeup and traditional silver jewelry.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-slot img-slot-tall forest">
+                        <img alt="Bhangra Dance" src="images/PB dance.jpeg" />
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="two-col">
+                    <div class="col-text">
+                        <h3>Music Tradition</h3>
+                        <p>The sounds of Punjab ranges from deeply meditative verses to vibrant folk beats.</p>
+                        <div class="txt-slot">
+                            <span class="txt-slot-tag">✏️ MUSIC</span>
+                            <ul>
+                                <li><b>Gurmat Sangeet:</b> The deeply spiritual tradition of singing the hymns of the
+                                    Guru Granth Sahib (Shabad Kirtan). It is strictly performed in the specified
+                                    classical Ragas using traditional string instruments like the Rabab and Dilruba.
+                                </li>
+                                <li><b>Sufi Music:</b> Punjab is the land of legendary Sufi mystics like Baba Farid,
+                                    Bulleh Shah, and Waris Shah. Their philosophical poetry, focusing on universal love
+                                    and spiritual peace, is often sung in the powerful Qawwali or Kafi styles.</li>
+                                <li><b>Folk &amp; Pop:</b> Traditional folk music heavily features the Tumbi (a
+                                    single-stringed instrument) and the Algoza (twin flutes). Today, this folk
+                                    foundation has merged with modern beats to create the massive global industry of
+                                    Punjabi Pop music.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-slot img-slot-tall amber">
+                        <img alt="Traditional Music" src="images/PB music.jpg" />
+                    </div>
+                </div>
+                <!-- Row 3 -->
+                <div class="two-col flip">
+                    <div class="col-text">
+                        <h3>Festivals</h3>
+                        <p>Festivals in Punjab are loud, joyous expressions of gratitude to nature and the divine.</p>
+                        <div class="txt-slot">
+                            <span class="txt-slot-tag">✏️ CELEBRATIONS</span>
+                            <ul>
+                                <li><b>Baisakhi:</b> Celebrated in mid-April, this is the most significant festival in
+                                    Punjab. It marks the harvest of the winter crops and, crucially, the day in 1699
+                                    when Guru Gobind Singh Ji established the Khalsa Panth.</li>
+                                <li><b>Lohri:</b> A winter festival celebrated in January to welcome longer days.
+                                    Communities gather around massive bonfires, offering peanuts, sesame seeds, and
+                                    jaggery to the flames, while singing folk songs.</li>
+                                <li><b>Hola Mohalla:</b> A three-day festival held in Anandpur Sahib, initiated by Guru
+                                    Gobind Singh Ji. Instead of throwing colors like Holi, Nihang Sikhs display
+                                    incredible martial arts, swordsmanship, and daredevil horse-riding skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-slot img-slot-tall forest">
+                        <img alt="Baisakhi Festival" src="images/PB festival.jpg" />
+                    </div>
+                </div>
+                <!-- Row 4 -->
+                <div class="two-col">
+                    <div class="col-text">
+                        <h3>Art and Craft</h3>
+                        <p>The state's artistic expression is woven into its textiles and daily life.</p>
+                        <div class="txt-slot">
+                            <span class="txt-slot-tag">✏️ ARTISANS</span>
+                            <ul>
+                                <li><b>Phulkari:</b> Translating to "flower work," this is the mesmerizing, vibrant
+                                    embroidery work done on dupattas and shawls. It is traditionally passed down from
+                                    mothers to daughters and worn during weddings and festivals.</li>
+                                <li><b>Juttis &amp; Woodwork:</b> Patiala is famous for its heavily embroidered leather
+                                    Juttis. Artisans across the state are also known for their intricate woodwork,
+                                    especially on traditional furniture like Manjis (woven beds) and Pihris (stools).
+                                </li>
+                                <li><b>Metalcraft:</b> Amritsar is historically known for Thatheras, the traditional
+                                    coppersmiths who make brass and copper utensils, an art form recognized by UNESCO as
+                                    an Intangible Cultural Heritage.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-slot img-slot-tall forest">
+                        <img alt="Art and Craft" src="images/PB art.jpg" />
+                    </div>
+                </div>
+                <!-- Row 5 -->
+                <div class="two-col flip">
+                    <div class="col-text">
+                        <h3>Food Culture</h3>
+                        <p>The culinary legacy of Punjab is rich, hearty, and celebrated worldwide.</p>
+                        <div class="txt-slot">
+                            <span class="txt-slot-tag">✏️ CUISINE</span>
+                            <ul>
+                                <li><b>Makki di Roti &amp; Sarson da Saag:</b> The quintessential Punjabi winter meal.
+                                    It consists of a thick, unleavened cornmeal flatbread served with a slow-cooked,
+                                    heavily spiced puree of mustard greens, invariably topped with a generous dollop of
+                                    homemade white butter.</li>
+                                <li><b>Amritsari Kulcha:</b> A world-famous street food. It is a crisp, flaky flatbread
+                                    stuffed with mashed potatoes, onions, and secret spices, baked in a tandoor, and
+                                    served with a tangy, spicy chickpea curry (Chole).</li>
+                                <li><b>Tandoori &amp; Dairy:</b> Punjab is famous for popularizing Tandoori cooking
+                                    (clay oven roasting) globally, giving us Tandoori Chicken and Naan. The diet is also
+                                    heavily dairy-based, featuring massive glasses of sweet or salted Lassi (churned
+                                    yogurt) and rich Paneer dishes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="img-slot img-slot-tall amber">
+                        <img alt="Punjabi Food" src="images/PB food.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ COLOUR BAND ════ -->
+    <div class="colour-band">
+        <div style="max-width:700px;margin:0 auto;">
+
+            <h2>Experience the Spirit of Punjab</h2>
+            <p>From the divine tranquility of the Golden Temple to the patriotic fervor at the Wagah Border, from the
+                endless green fields that feed a nation to the booming beats of the dhol. Punjab is an emotion, an
+                unmatched energy that embraces every visitor with open arms and a warm heart. Welcome to the land of the
+                brave.</p>
+        </div>
+    </div>
+
+    <!-- ════ TIMELINE (Horizontal, JS-powered accordion) ════ -->
+    <section class="section" id="timeline">
+        <div class="wrapper">
+            <div class="section-kicker">Through the Ages</div>
+            <h2 class="section-heading">Historical <em>Timeline</em></h2>
+
+            <div class="timeline-horizontal" id="pb-timeline">
+                <!-- ── Step buttons (horizontal row) ── -->
+                <div class="tl-steps" role="tablist">
+                    <button type="button" class="tl-step" role="tab" aria-selected="true" data-tl-index="0"
+                        id="tl-tab-0" aria-controls="tl-panel-0">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">3000 BCE – 600 BCE</span>
+                        <span class="tl-title">Ancient &amp; Vedic Era</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="1"
+                        id="tl-tab-1" aria-controls="tl-panel-1">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">15th Century</span>
+                        <span class="tl-title">Foundation of Sikhism</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="2"
+                        id="tl-tab-2" aria-controls="tl-panel-2">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1524 – 1752</span>
+                        <span class="tl-title">The Mughal Era</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="3"
+                        id="tl-tab-3" aria-controls="tl-panel-3">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1799 – 1849</span>
+                        <span class="tl-title">The Sikh Empire</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="4"
+                        id="tl-tab-4" aria-controls="tl-panel-4">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1849 – 1947</span>
+                        <span class="tl-title">British Colonial Rule</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="5"
+                        id="tl-tab-5" aria-controls="tl-panel-5">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1919 – 1947</span>
+                        <span class="tl-title">Freedom Struggle</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="6"
+                        id="tl-tab-6" aria-controls="tl-panel-6">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1947</span>
+                        <span class="tl-title">The Partition of India</span>
+                    </button>
+                    <button type="button" class="tl-step" role="tab" aria-selected="false" data-tl-index="7"
+                        id="tl-tab-7" aria-controls="tl-panel-7">
+                        <span class="tl-dot" aria-hidden="true"></span>
+                        <span class="tl-year">1966</span>
+                        <span class="tl-title">Punjabi Suba Movement</span>
+                    </button>
+                </div>
+
+                <!-- ── Content panels (only one visible at a time) ── -->
+                <div class="tl-panels">
+                    <!-- Panel 0: Ancient & Vedic Era -->
+                    <div class="tl-panel active" id="tl-panel-0" role="tabpanel" aria-labelledby="tl-tab-0">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>The Indus Valley Civilization (3000–1500 BCE)</h4>
+                                <p>Punjab is one of the oldest cradles of human civilization. The region was home to
+                                    major sites of the <b>Indus Valley (Harappan) Civilization</b>, one of the world's
+                                    three earliest urban cultures alongside Mesopotamia and Egypt. The ancient city of
+                                    <b>Harappa</b> (now in Pakistani Punjab) was a thriving urban centre with advanced
+                                    town planning, a sophisticated drainage system, standardized weights and measures,
+                                    and flourishing trade networks stretching to Mesopotamia. Artifacts from this era —
+                                    including terracotta figurines, seals with undeciphered scripts, and bronze tools —
+                                    reveal a remarkably advanced society that existed over 5,000 years ago.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Vedic Period (1500–600 BCE)</h4>
+                                <p>The Punjab region, particularly the area between the Sarasvati and Drishadvati
+                                    rivers, is widely considered the heartland where the <b>Rigveda</b> — the oldest
+                                    known religious text in the world — was composed. The land of the "Sapta Sindhu"
+                                    (Seven Rivers) was where early Vedic hymns celebrated nature, the cosmos, and
+                                    elaborate fire rituals. The region witnessed the development of the <b>Varna
+                                        system</b>, the composition of the Upanishads, and the establishment of early
+                                    Janapadas (tribal republics). The Battle of the Ten Kings (<b>Dasharajna</b>),
+                                    described in the Rigveda, is believed to have been fought on the banks of the River
+                                    Ravi in Punjab — one of the earliest recorded battles in human history.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Alexander's Invasion &amp; the Mauryan Empire (326–185 BCE)</h4>
+                                <p>In 326 BCE, <b>Alexander the Great</b> crossed the Indus and fought the legendary
+                                    <b>Battle of Hydaspes</b> (on the River Jhelum) against King Porus (Purushottama).
+                                    Despite Alexander's victory, he was so impressed by Porus's valour that he
+                                    reinstated him as a vassal king. Alexander's exhausted army refused to march further
+                                    east, and he turned back — marking Punjab as the eastern frontier of his empire.
+                                    Shortly after, <b>Chandragupta Maurya</b> established the Mauryan Empire, bringing
+                                    Punjab under centralized Indian governance. His grandson <b>Emperor Ashoka</b>
+                                    spread Buddhism across the region; the famous <b>Taxila University</b> (near modern
+                                    Rawalpindi) became one of the world's earliest seats of learning, attracting
+                                    scholars from Greece, Persia, and China.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>Successive Empires &amp; Invasions (200 BCE – 1000 CE)</h4>
+                                <p>For over a millennium, Punjab served as the gateway to India and witnessed waves of
+                                    invaders and rulers. The <b>Indo-Greeks</b> (Menander I) brought Hellenistic culture
+                                    and Gandharan art. The <b>Kushans</b> under Emperor Kanishka (whose capital Peshawar
+                                    lay in greater Punjab) patronized Buddhism and built the magnificent Qila Mubarak in
+                                    Bathinda. The <b>Gupta Empire</b> ushered in a golden age of arts and sciences.
+                                    Later, the <b>Huns</b> under Mihirakula ravaged the region. The <b>Hindu Shahi
+                                        dynasty</b> ruled Punjab for centuries before the devastating raids of <b>Mahmud
+                                        of Ghazni</b> (1001–1027 CE) began, marking the start of Islamic influence in
+                                    the region.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 1: Foundation of Sikhism -->
+                    <div class="tl-panel" id="tl-panel-1" role="tabpanel" aria-labelledby="tl-tab-1">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>The Birth of Sikhism</h4>
+                                <p>In 1469, Guru Nanak Dev Ji was born in Talwandi (now Nankana Sahib, Pakistan). After
+                                    a profound spiritual experience at the River Bein around the age of 30, he emerged
+                                    with the declaration: "There is no Hindu, there is no Muslim." He then embarked on
+                                    four epic spiritual journeys called <b>Udasis</b>, travelling across South Asia,
+                                    Tibet, the Middle East, and even Mecca, preaching a revolutionary message of one
+                                    universal God, equality of all humans, honest living, and selfless service.</p>
+                            </div>
+                            <div class="box">
+                                <h4>The Ten Sikh Gurus (1469–1708)</h4>
+                                <p>Guru Nanak's teachings were carried forward by nine successive Gurus over two
+                                    centuries. <b>Guru Angad Dev Ji</b> standardized the Gurmukhi script, making sacred
+                                    texts accessible to common people. <b>Guru Amar Das Ji</b> institutionalized the
+                                    Langar system and fought against the practice of Sati. <b>Guru Ram Das Ji</b>
+                                    founded the holy city of Amritsar and excavated the sacred pool (Amrit Sarovar).
+                                    <b>Guru Arjan Dev Ji</b> compiled the Adi Granth (the first edition of the Sikh holy
+                                    scripture) and built the Harmandir Sahib; he became the first Sikh martyr when
+                                    executed by Mughal Emperor Jahangir in 1606.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Warrior-Saint Tradition</h4>
+                                <p>Following the martyrdom of Guru Arjan Dev Ji, <b>Guru Hargobind Sahib</b> introduced
+                                    the concept of <b>Miri-Piri</b> — the combination of spiritual and temporal
+                                    authority — and wore two swords symbolizing this dual power. <b>Guru Tegh Bahadur
+                                        Ji</b>, the ninth Guru, sacrificed his life in Delhi in 1675 to protect the
+                                    right of Kashmiri Pandits to practice their own faith, earning the title "Hind di
+                                    Chadar" (Shield of India). His martyrdom remains one of history's greatest acts of
+                                    religious tolerance.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Creation of the Khalsa (1699)</h4>
+                                <p>On the day of Baisakhi in 1699 at Anandpur Sahib, the tenth Guru, <b>Guru Gobind
+                                        Singh Ji</b>, established the <b>Khalsa Panth</b> — a community of initiated
+                                    Sikhs committed to upholding justice. He introduced the five articles of faith (the
+                                    5 Ks): Kesh (uncut hair), Kangha (wooden comb), Kara (steel bracelet), Kachera
+                                    (cotton undergarment), and Kirpan (ceremonial sword). He also declared the <b>Guru
+                                        Granth Sahib</b> as the eternal, living Guru of the Sikhs, ending the line of
+                                    human Gurus.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Cultural &amp; Social Revolution</h4>
+                                <p>The Sikh movement profoundly transformed Punjab's social fabric. The <b>Langar</b>
+                                    (community kitchen) forced people of all castes, religions, and social standings to
+                                    sit together on the floor and eat the same food — dismantling centuries of caste
+                                    hierarchy. The Gurmukhi script democratized literacy. Women were given equal status
+                                    in worship and society. These revolutionary social reforms made Punjab one of the
+                                    most egalitarian regions of medieval India, and their legacy continues to shape
+                                    Punjabi culture to this day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 2: The Mughal Era -->
+                    <div class="tl-panel" id="tl-panel-2" role="tabpanel" aria-labelledby="tl-tab-2">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>Babur &amp; the Arrival of the Mughals (1524–1530)</h4>
+                                <p>In 1524, <b>Zahir ud-din Muhammad Babur</b>, a Timurid prince from Central Asia,
+                                    invaded Punjab and defeated Ibrahim Lodi at the <b>First Battle of Panipat
+                                        (1526)</b>, establishing the Mughal Empire. Punjab became the strategic entry
+                                    point and a vital province of the empire. Babur's memoirs, the <b>Baburnama</b>,
+                                    describe Punjab's fertile plains and its importance as the gateway to Hindustan. His
+                                    descendants would rule the region for over two centuries, fundamentally shaping its
+                                    architecture, cuisine, language, and cultural identity.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Akbar's Golden Age &amp; Administration (1556–1605)</h4>
+                                <p>Emperor <b>Akbar the Great</b> transformed Punjab into one of the most
+                                    well-administered provinces (<b>Subah</b>) of the empire. He introduced the
+                                    revolutionary <b>Mansabdari</b> and <b>Zamindari</b> systems for revenue collection
+                                    and military organization. Akbar's policy of <b>Sulh-i-Kul</b> (universal peace)
+                                    promoted religious tolerance. He visited Guru Amar Das Ji at Goindwal Sahib, and was
+                                    so moved by the Langar that he granted revenue-free land to the Sikh community. The
+                                    city of <b>Lahore</b> flourished as a cultural capital, adorned with magnificent
+                                    gardens, mosques, and the iconic Lahore Fort.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Sufi Saints &amp; Syncretic Culture</h4>
+                                <p>The Mughal period deepened the Sufi mystical tradition that had already taken root in
+                                    Punjab. Legendary saints like <b>Baba Farid</b> (whose verses are included in the
+                                    Guru Granth Sahib), <b>Bulleh Shah</b> of Kasur, and <b>Waris Shah</b> (author of
+                                    the iconic love epic <i>Heer Ranjha</i>) composed poetry in Punjabi that transcended
+                                    religious boundaries. Their message of divine love, humility, and rejection of
+                                    ritualism created a unique syncretic culture where Hindus, Muslims, and Sikhs shared
+                                    shrines, festivals, and folk traditions. This pluralistic legacy is one of Punjab's
+                                    greatest cultural treasures.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Mughal-Sikh Conflicts &amp; Decline (1606–1752)</h4>
+                                <p>Relations between the Mughal court and the Sikh community deteriorated sharply under
+                                    later emperors. <b>Emperor Jahangir</b> ordered the execution of Guru Arjan Dev Ji
+                                    in 1606. <b>Emperor Aurangzeb's</b> zealous religious policies led to the martyrdom
+                                    of Guru Tegh Bahadur Ji in 1675 and prolonged military campaigns against Guru Gobind
+                                    Singh Ji. As the Mughal Empire weakened after Aurangzeb's death in 1707, Punjab was
+                                    devastated by the invasions of <b>Nadir Shah (1739)</b> — who sacked Delhi and
+                                    looted the Peacock Throne — and the repeated raids of <b>Ahmad Shah
+                                        Abdali/Durrani</b> between 1747 and 1769, who inflicted massive destruction on
+                                    the region before the Sikh Misls rose to fill the power vacuum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 3: The Sikh Empire -->
+                    <div class="tl-panel" id="tl-panel-3" role="tabpanel" aria-labelledby="tl-tab-3">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>Rise of Maharaja Ranjit Singh</h4>
+                                <p>Born in 1780 in Gujranwala (now in Pakistan), Ranjit Singh lost his father at age 12
+                                    and began leading military campaigns as a teenager. By age 21, he captured Lahore
+                                    from the Afghan Bhangi Misl in 1799 and was proclaimed <b>Maharaja of Punjab</b>.
+                                    Over the next four decades, he brilliantly unified the twelve warring Sikh Misls
+                                    (confederacies) into a single, formidable sovereign state — the last major power on
+                                    the Indian subcontinent to remain independent from the British East India Company.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Khalsa Army — A Military Revolution</h4>
+                                <p>Ranjit Singh built one of the most powerful and modernized armies in Asia, known as
+                                    the <b>Sikh Khalsa Army</b>. He hired European officers — including French generals
+                                    Jean-François Allard and Jean-Baptiste Ventura — to train his infantry along
+                                    Napoleonic lines. The army consisted of over 120,000 soldiers, equipped with modern
+                                    artillery and disciplined cavalry. The <b>Akali Nihangs</b> formed the fearless
+                                    vanguard. This military prowess allowed the empire to annex Multan, Kashmir,
+                                    Peshawar, and push its borders up to the Khyber Pass and western Tibet.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Secular Governance &amp; Religious Tolerance</h4>
+                                <p>Despite being a devout Sikh, Maharaja Ranjit Singh's administration was remarkably
+                                    secular and pluralistic. His prime minister, <b>Fakir Azizuddin</b>, was Muslim; his
+                                    finance minister, <b>Dewan Mokham Chand</b>, was Hindu; and many generals were of
+                                    diverse faiths. He donated generously to Hindu temples, Muslim mosques, and Sikh
+                                    Gurdwaras alike. He famously gifted the Koh-i-Noor diamond to the Jagannath Temple
+                                    and sponsored the gold plating of the Harmandir Sahib (Golden Temple), giving it the
+                                    appearance we know today.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Economic &amp; Cultural Golden Age</h4>
+                                <p>Under Ranjit Singh, Lahore became one of the wealthiest and most cosmopolitan cities
+                                    in Asia. Trade flourished along routes connecting Central Asia to the Indian plains.
+                                    The empire minted its own currency (the Nanakshahi coins), promoted the arts, and
+                                    patronized grand architectural projects. The <b>Lahore Darbar</b> was legendary for
+                                    its opulence, attracting diplomats, scholars, and artists from across the world.
+                                    Punjab's textile, agricultural, and handicraft industries thrived during this
+                                    prosperous period.</p>
+                            </div>
+                            <div class="box">
+                                <h4>The Anglo-Sikh Wars &amp; Fall of the Empire</h4>
+                                <p>After Ranjit Singh's death in 1839, internal court intrigues and the assassination of
+                                    successive heirs weakened the empire. The British East India Company, eager to
+                                    absorb the last independent power, fought two brutal wars. The <b>First Anglo-Sikh
+                                        War (1845–46)</b> ended with the Treaty of Lahore, stripping the empire of
+                                    Kashmir and much territory. The <b>Second Anglo-Sikh War (1848–49)</b> culminated in
+                                    the decisive Battle of Gujrat, after which Punjab was formally annexed by the
+                                    British. The young Maharaja Duleep Singh was dethroned and exiled to England, and
+                                    the legendary Koh-i-Noor diamond was confiscated by the British Crown.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 4: British Colonial Rule -->
+                    <div class="tl-panel" id="tl-panel-4" role="tabpanel" aria-labelledby="tl-tab-4">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>Annexation &amp; Early British Rule (1849–1857)</h4>
+                                <p>After the Second Anglo-Sikh War in 1849, Punjab was formally annexed by the British
+                                    East India Company under <b>Lord Dalhousie</b>. The province was placed under a
+                                    powerful Board of Administration led by <b>Henry and John Lawrence</b>. The British
+                                    dismantled the Sikh military apparatus, confiscated the state treasury, and
+                                    introduced a new revenue system. Young <b>Maharaja Duleep Singh</b>, the last Sikh
+                                    sovereign, was separated from his mother Rani Jindan and exiled to England at the
+                                    age of 15, where he was forced to convert to Christianity. The Koh-i-Noor diamond
+                                    was seized and presented to Queen Victoria.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Infrastructure &amp; Modernisation</h4>
+                                <p>The British invested heavily in Punjab's infrastructure to serve their economic and
+                                    military interests. The extensive <b>canal colony system</b> — including the Upper
+                                    Bari Doab Canal and the Lower Chenab Canal — transformed arid wastelands into
+                                    fertile agricultural tracts, attracting settlers from across the region. The
+                                    <b>North Western Railway</b> connected Lahore, Amritsar, and Delhi. New planned
+                                    cities like <b>Lyallpur (now Faisalabad)</b> and <b>Montgomery (now Sahiwal)</b>
+                                    were established. English-medium schools and colleges, including <b>Government
+                                        College Lahore</b> and <b>Khalsa College Amritsar</b>, created a new educated
+                                    class.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Punjab in World Wars</h4>
+                                <p>Punjabis — particularly Sikhs, Jat Muslims, and Rajputs — were classified as "martial
+                                    races" by the British and formed a disproportionately large share of the British
+                                    Indian Army. During <b>World War I</b>, over 300,000 Punjabi soldiers served on the
+                                    Western Front, at Gallipoli, and in Mesopotamia. In <b>World War II</b>, Punjab
+                                    contributed the largest contingent of any Indian province. The <b>Victoria Cross</b>
+                                    was awarded to several Punjabi soldiers. Yet, despite their sacrifices, Punjabis
+                                    returned home to find themselves second-class citizens in their own land, fuelling
+                                    the independence movement.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Social &amp; Religious Reform Movements</h4>
+                                <p>The colonial period also sparked powerful reform movements. The <b>Singh Sabha
+                                        Movement</b> (1873 onwards) sought to revitalize Sikh identity, establish Khalsa
+                                    schools, and reclaim Gurdwaras from corrupt Mahants. The <b>Arya Samaj</b>, founded
+                                    by Swami Dayananda, promoted Vedic education and social reform among Hindus. The
+                                    <b>Ahmadiyya Movement</b> and various Muslim reform organizations also emerged.
+                                    These movements collectively raised political consciousness, promoted modern
+                                    education, and laid the groundwork for the independence struggle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 5: Freedom Struggle -->
+                    <div class="tl-panel" id="tl-panel-5" role="tabpanel" aria-labelledby="tl-tab-5">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>The Jallianwala Bagh Massacre (1919)</h4>
+                                <p>On April 13, 1919, during the auspicious festival of <b>Baisakhi</b>, thousands of
+                                    peaceful, unarmed civilians gathered at Jallianwala Bagh in Amritsar to protest the
+                                    draconian <b>Rowlatt Act</b>. Without warning, <b>Brigadier-General Reginald
+                                        Dyer</b> ordered his troops to open fire on the enclosed crowd, blocking the
+                                    only exit. The shooting continued for approximately 10 minutes, with soldiers firing
+                                    1,650 rounds. Official British estimates placed the death toll at 379, though Indian
+                                    sources estimate over 1,000 killed and 1,500 wounded. This horrific act shocked the
+                                    world and became a defining turning point in the Indian independence movement.</p>
+                            </div>
+                            <div class="box">
+                                <h4>The Ghadar Movement &amp; Revolutionary Punjabis</h4>
+                                <p>Punjab produced some of India's most fearless freedom fighters. The <b>Ghadar
+                                        Party</b>, founded in 1913 by expatriate Punjabis in San Francisco (led by
+                                    <b>Lala Har Dayal</b> and <b>Sohan Singh Bhakna</b>), planned an armed revolution
+                                    against British rule. <b>Shaheed Bhagat Singh</b>, born in Banga, Punjab, became
+                                    India's most iconic revolutionary — his bold actions, including the Delhi Assembly
+                                    bombing (1929) and his fearless martyrdom at age 23 in Lahore Central Jail,
+                                    electrified the nation. Other Punjabi heroes included <b>Udham Singh</b>, who
+                                    assassinated Michael O'Dwyer in London in 1940 to avenge the Jallianwala Bagh
+                                    massacre, and <b>Kartar Singh Sarabha</b>, hanged at age 19.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Akali Movement &amp; Gurdwara Reform (1920–1925)</h4>
+                                <p>The <b>Akali Movement</b> (also called the Gurdwara Reform Movement) was a landmark
+                                    non-violent struggle by Sikhs to wrest control of their Gurdwaras from corrupt
+                                    hereditary priests (<b>Mahants</b>) who were supported by the British. Key incidents
+                                    included the <b>Nankana Sahib Massacre (1921)</b>, where over 130 peaceful Akali
+                                    protesters were killed by the Mahant's armed thugs. The movement's success led to
+                                    the passage of the <b>Sikh Gurdwaras Act of 1925</b>, establishing the <b>Shiromani
+                                        Gurdwara Parbandhak Committee (SGPC)</b> to democratically manage Sikh shrines.
+                                    Mahatma Gandhi praised it as the "first decisive battle for India's freedom won."
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Road to Independence (1930–1947)</h4>
+                                <p>Punjab was at the centre of the final push for independence. Punjabis
+                                    enthusiastically participated in Gandhi's <b>Civil Disobedience Movement</b>, the
+                                    <b>Quit India Movement (1942)</b>, and the <b>Indian National Army (INA)</b> under
+                                    Subhas Chandra Bose. The <b>Lahore Resolution (1940)</b>, passed at Minto Park in
+                                    Lahore, formally demanded the creation of a separate Muslim state (Pakistan),
+                                    setting the stage for partition. Political leaders like <b>Lala Lajpat Rai</b>
+                                    ("Lion of Punjab," who died from injuries sustained during a lathi charge in 1928),
+                                    <b>Master Tara Singh</b>, and <b>Sardar Baldev Singh</b> played pivotal roles in
+                                    shaping the final years of the freedom struggle.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 6: The Partition of India -->
+                    <div class="tl-panel" id="tl-panel-6" role="tabpanel" aria-labelledby="tl-tab-6">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>The Radcliffe Line &amp; Division</h4>
+                                <p>When India gained independence on August 15, 1947, the British lawyer <b>Sir Cyril
+                                        Radcliffe</b> — who had never visited India before — was tasked with drawing the
+                                    border in just five weeks. The province of Punjab was split along religious
+                                    demographics: the Muslim-majority western districts became part of the newly formed
+                                    Pakistan, while the Hindu and Sikh-majority eastern districts remained with India.
+                                    Historic cities like Lahore, Rawalpindi, and Multan — deeply tied to Sikh and Hindu
+                                    heritage — fell on the Pakistani side, severing centuries-old cultural and economic
+                                    ties overnight.</p>
+                            </div>
+                            <div class="box">
+                                <h4>The Largest Mass Migration in History</h4>
+                                <p>The partition triggered the largest mass migration in recorded human history. An
+                                    estimated <b>14 to 18 million people</b> were uprooted from their ancestral homes.
+                                    Entire Sikh and Hindu communities from West Punjab (Pakistan) fled eastward, while
+                                    Muslims from East Punjab (India) moved westward. Massive foot caravans — some
+                                    stretching over 60 kilometres long — trudged across the newly drawn border. Refugee
+                                    camps in cities like Amritsar, Jalandhar, and the newly planned city of Chandigarh
+                                    were overwhelmed with displaced families carrying nothing but the clothes on their
+                                    backs.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Communal Violence &amp; Human Cost</h4>
+                                <p>The partition was accompanied by horrific communal violence on both sides of the
+                                    border. Estimates suggest that between <b>500,000 to 2 million people</b> were
+                                    killed in the riots, massacres, and targeted attacks. Entire train-loads of refugees
+                                    arrived at their destinations carrying only corpses — these "ghost trains" became a
+                                    haunting symbol of the tragedy. Women were disproportionately targeted; an estimated
+                                    75,000 to 100,000 women were abducted. The Punjab bore the worst of this violence,
+                                    and the scars of partition remain deeply embedded in the collective memory of the
+                                    region.</p>
+                            </div>
+                            <div class="box">
+                                <h4>Rebuilding from the Ashes</h4>
+                                <p>Despite the devastating loss, the resilient people of Punjab rebuilt their lives with
+                                    remarkable determination. The Indian government undertook massive rehabilitation
+                                    programs, allotting evacuee properties and agricultural land to displaced families.
+                                    <b>Chandigarh</b>, designed by the legendary architect Le Corbusier, was built from
+                                    scratch as the new capital — a modernist symbol of a fresh beginning. Punjabi
+                                    refugees, known for their entrepreneurial spirit, established thriving businesses
+                                    across India, from the textile mills of Ludhiana to the bustling markets of Delhi's
+                                    Karol Bagh and Lajpat Nagar.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>Lasting Cultural Legacy</h4>
+                                <p>The partition left an indelible mark on Punjabi literature, cinema, and art. Writers
+                                    like <b>Saadat Hasan Manto</b>, <b>Amrita Pritam</b> (whose poem "Ajj Aakhaan Waris
+                                    Shah Nu" is a heartbreaking appeal), and <b>Bhisham Sahni</b> (author of "Tamas")
+                                    created masterpieces that documented the horror and resilience of partition. The
+                                    Partition Museum in Amritsar's Town Hall preserves oral histories, personal
+                                    artifacts, and photographs donated by survivors. Despite the trauma, the shared
+                                    cultural heritage of Punjabi language, music, and cuisine continues to bind the
+                                    people of Indian and Pakistani Punjab across the border.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Panel 7: Punjabi Suba Movement -->
+                    <div class="tl-panel" id="tl-panel-7" role="tabpanel" aria-labelledby="tl-tab-7">
+                        <div class="mp-details">
+                            <div class="box">
+                                <h4>The Demand for a Punjabi-Speaking State</h4>
+                                <p>After independence, the Indian government reorganized most states along linguistic
+                                    lines — but Punjab was excluded from this process. The <b>Punjabi Suba Movement</b>,
+                                    led primarily by <b>Master Tara Singh</b> and later <b>Sant Fateh Singh</b> of the
+                                    Shiromani Akali Dal, demanded the creation of a separate state for Punjabi-speaking
+                                    people. The movement was rooted in the principle of linguistic identity, just as
+                                    Andhra Pradesh was carved out for Telugu speakers and Maharashtra for Marathi
+                                    speakers. The demand involved years of peaceful protests, political negotiations,
+                                    hunger strikes, and parliamentary debates.</p>
+                            </div>
+                            <div class="box">
+                                <h4>The States Reorganisation (1966)</h4>
+                                <p>On <b>November 1, 1966</b>, the Indian government finally accepted the demand and
+                                    trifurcated the existing Punjab state. The Punjabi-speaking areas formed the new,
+                                    smaller state of <b>Punjab</b>. The Hindi-speaking southern plains were carved out
+                                    to create the new state of <b>Haryana</b>. The Pahari-speaking hilly northern
+                                    regions were merged into <b>Himachal Pradesh</b>. The modernist city of
+                                    <b>Chandigarh</b> — designed by Le Corbusier — was retained as a Union Territory and
+                                    declared the shared capital of both Punjab and Haryana, a unique arrangement that
+                                    continues to this day.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>The Green Revolution (1960s–1970s)</h4>
+                                <p>The newly formed state of Punjab became the epicentre of India's <b>Green
+                                        Revolution</b>. Under the guidance of agricultural scientist <b>Dr. M.S.
+                                        Swaminathan</b>, high-yielding varieties of wheat (particularly the Mexican
+                                    dwarf wheat developed by Norman Borlaug) and modern farming techniques were
+                                    introduced. Punjab's farmers adopted these innovations with extraordinary
+                                    enthusiasm. Within a decade, India transformed from a famine-threatened nation
+                                    dependent on food imports into a self-sufficient grain producer. Punjab alone began
+                                    contributing over <b>40% of India's wheat</b> and <b>25% of its rice</b> to the
+                                    central food pool, truly earning its title as the "Granary of India."</p>
+                            </div>
+                            <div class="box">
+                                <h4>Industrial &amp; Educational Growth</h4>
+                                <p>Beyond agriculture, modern Punjab rapidly industrialized. <b>Ludhiana</b> became the
+                                    "Manchester of India," emerging as the country's largest manufacturer of bicycles,
+                                    sewing machines, and hosiery products. <b>Jalandhar</b> gained international
+                                    recognition for producing world-class sports goods and surgical instruments.
+                                    Educational institutions like <b>Punjab Agricultural University (Ludhiana)</b>,
+                                    <b>Guru Nanak Dev University (Amritsar)</b>, and <b>Thapar University (Patiala)</b>
+                                    became centres of academic excellence. The Punjabi diaspora also spread across the
+                                    globe, establishing thriving communities in Canada, the UK, the USA, and Australia.
+                                </p>
+                            </div>
+                            <div class="box">
+                                <h4>Contemporary Punjab &amp; Global Influence</h4>
+                                <p>Today, Punjab continues to evolve while holding firmly onto its cultural roots. The
+                                    state boasts one of India's highest per-capita incomes and best road networks.
+                                    Punjabi music and cinema have become a global cultural force, with artists and
+                                    filmmakers reaching audiences worldwide. The <b>IT City project in Mohali</b> and
+                                    the growth of startups reflect Punjab's modern ambitions. Yet the soul of Punjab
+                                    remains in its villages — in the golden wheat fields swaying at harvest, the
+                                    thundering beats of the dhol at weddings, the aroma of fresh makki di roti, and the
+                                    eternal spirit of <b>Chardi Kala</b> (boundless optimism) that defines its people.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ EXTRA / FREE-FORM ════ -->
+    <section class="section" id="map-section">
+        <div class="wrapper">
+            <div class="section-kicker">Navigation</div>
+            <h2 class="section-heading">Geographical <em>Location</em></h2>
+
+            <div class="info-box" style="width: 100%;">
+                <div class="info-box-title">
+                    <span class="dot"></span> Punjab State Map
+                </div>
+
+                <div class="img-slot" style="height: 500px; margin-top: 20px; cursor: default;">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1750641.3951189173!2d74.0885314211297!3d31.020078538855177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391964aa569e7355%3A0x8fbd263103a38861!2sPunjab!5e0!3m2!1sen!2sin!4v1774526546805!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Punjab <em></em></div>
+
+                    <p class="footer-about">Step into a vibrant land renowned for its endless golden wheat fields,
+                        profound spiritual tranquility, and a deeply rooted martial history.</p>
+                </div>
+                <div>
+                    <div class="footer-col-heading">Quick Links</div>
+                    <ul class="footer-list">
+                        <li><a href="#about">About State</a></li>
+                        <li><a href="#places">Attractions</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+
+                <span>© 2025 Punjab Overview. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- modal attactions -->
+    <div class="css-modal" id="modal-golden">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Golden Temple 1" src="images/golden temple 1.jpeg" />
+                    <img alt="Golden Temple 2" src="images/golden temple 2.jpeg" />
+                    <img alt="Golden Temple 3" src="images/golden temple 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Golden Temple (Sri Harmandir Sahib)</b></h1>
+                <div class="box">
+                    <h3>History</h3>
+                    <p>Founded in 1577 by the fourth Sikh Guru, Guru Ram Das Ji. The foundation stone was famously laid
+                        by a Muslim Sufi saint, Mian Mir, symbolizing the faith's inclusivity. The iconic gold plating
+                        was added centuries later by Maharaja Ranjit Singh.</p>
+                </div>
+                <div class="box">
+                    <h3>Architecture</h3>
+                    <p>Built at a level lower than the surrounding land to signify humility. It features four entrances
+                        facing all four directions, representing that people from all walks of life are welcome. The
+                        blend of Hindu and Islamic architectural styles is stunning.</p>
+                </div>
+                <div class="box">
+                    <h3>The Langar</h3>
+                    <p>Houses the world's largest free kitchen, serving vegetarian meals to over 100,000 people daily,
+                        regardless of religion, caste, or gender, operated entirely by volunteers (Sevadars).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-jallianwala">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Jallianwala Bagh 1" src="images/jallianwala bagh 1.jpeg" />
+                    <img alt="Jallianwala Bagh 2" src="images/jallianwala bagh 2.jpeg" />
+                    <img alt="Jallianwala Bagh 3" src="images/jallianwala bagh 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Jallianwala Bagh</b></h1>
+                <div class="box">
+                    <h3>History</h3>
+                    <p>On April 13, 1919, during the festival of Baisakhi, acting Brigadier-General Reginald Dyer
+                        ordered troops to fire upon a peaceful crowd of unarmed Indian civilians gathered here.</p>
+                </div>
+                <div class="box">
+                    <h3>The Memorial</h3>
+                    <p>The site preserves the original bullet marks on the brick walls and the tragic "Martyrs' Well,"
+                        where hundreds jumped to escape the gunfire.</p>
+                </div>
+                <div class="box">
+                    <h3>Importance</h3>
+                    <p>This brutal event was a pivotal turning point in Indian history, deeply alienating Indians from
+                        British rule and acting as a major catalyst for the Indian Independence Movement led by Mahatma
+                        Gandhi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-wagah">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Wagah Border 1" src="images/wagga border 1.jpeg" />
+                    <img alt="Wagah Border 2" src="images/wagga border 2.jpg" />
+                    <img alt="Wagah Border 3" src="images/wagga border 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Wagah-Attari Border</b></h1>
+                <div class="box">
+                    <h3>The Ceremony</h3>
+                    <p>Every evening before sunset, soldiers from the Indian Border Security Force (BSF) and the
+                        Pakistan Rangers perform a highly choreographed, energetic, and theatrical military parade.</p>
+                </div>
+                <div class="box">
+                    <h3>Atmosphere</h3>
+                    <p>The stadium-like seating on both sides is filled with thousands of spectators chanting patriotic
+                        slogans, dancing, and waving national flags, creating an electrifying atmosphere.</p>
+                </div>
+                <div class="box">
+                    <h3>Significance</h3>
+                    <p>While the high kicks and aggressive posturing are a display of rivalry, the synchronized lowering
+                        of the flags and the brief handshake between soldiers symbolize a shared history and the hope
+                        for eventual brotherhood.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-virasat">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Virasat-e-Khalsa 1" src="images/virasat 1.jpeg" />
+                    <img alt="Virasat-e-Khalsa 2" src="images/virasat 2.jpeg" />
+                    <img alt="Virasat-e-Khalsa 3" src="images/virasat 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Virasat-e-Khalsa</b></h1>
+                <div class="box">
+                    <h3>Architecture</h3>
+                    <p>Designed by acclaimed architect Moshe Safdie, the building is an architectural marvel. Its
+                        rooflines evoke the fortress towers of the region, while the reflecting pools harmonize with the
+                        surrounding rugged landscape.</p>
+                </div>
+                <div class="box">
+                    <h3>Exhibits</h3>
+                    <p>The museum utilizes state-of-the-art multimedia, including massive hand-painted murals, intricate
+                        tapestries, and audio-visual displays, to narrate the lives of the ten Sikh Gurus.</p>
+                </div>
+                <div class="box">
+                    <h3>Importance</h3>
+                    <p>It holds the record for being the most visited museum in the Indian subcontinent on a single day.
+                        It successfully translates deeply spiritual concepts into a highly engaging visual journey for
+                        visitors of all ages.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-qila">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Qila Mubarak 1" src="images/mubarak 1.jpeg" />
+                    <img alt="Qila Mubarak 2" src="images/mubarak 2.jpeg" />
+                    <img alt="Qila Mubarak 3" src="images/mubarak 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Qila Mubarak</b></h1>
+                <div class="box">
+                    <h3>History</h3>
+                    <p>Believed to be built by Kanishka (Kushan emperor) around 90-110 AD. It is one of the highest and
+                        oldest surviving brick forts in India.</p>
+                </div>
+                <div class="box">
+                    <h3>Architecture</h3>
+                    <p>Characterized by massive, imposing brick walls built atop a raised mound, giving it an imposing,
+                        impenetrable profile across the flat Malwa plains.</p>
+                </div>
+                <div class="box">
+                    <h3>Significance</h3>
+                    <p>Most famously known as the final prison of Razia Sultana, the first female monarch of the Delhi
+                        Sultanate, before her assassination.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-harike">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Harike Wetland 1" src="images/harike 1.jpeg" />
+                    <img alt="Harike Wetland 2" src="images/harike 2.jpeg" />
+                    <img alt="Harike Wetland 3" src="images/harike 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Harike Wetland</b></h1>
+                <div class="box">
+                    <h3>Ecosystem</h3>
+                    <p>Also known as "Hari-ke-Pattan," it covers thousands of hectares and is designated as a Ramsar
+                        site of international importance.</p>
+                </div>
+                <div class="box">
+                    <h3>Wildlife</h3>
+                    <p>A birdwatcher's paradise, hosting thousands of migratory birds coming from Siberia and the Arctic
+                        every winter. It also protects the endangered rare Indus River dolphin.</p>
+                </div>
+                <div class="box">
+                    <h3>Importance</h3>
+                    <p>Beyond biodiversity, the vast lake and barrage are critical for regulating agricultural water
+                        flow through the Indira Gandhi Canal down to Rajasthan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-partition">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Partition Museum 1" src="images/partition 1.webp" />
+                    <img alt="Partition Museum 2" src="images/partition 2.jpeg" />
+                    <img alt="Partition Museum 3" src="images/partition 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Partition Museum</b></h1>
+                <div class="box">
+                    <h3>Curation</h3>
+                    <p>Houses a deeply emotional collection of oral histories, newspaper clippings, photographs, and
+                        personal artifacts donated by survivors who fled their homes with nothing.</p>
+                </div>
+                <div class="box">
+                    <h3>Galleries</h3>
+                    <p>Organized chronologically and thematically, walking visitors through the pre-partition era, the
+                        brutal redrawing of borders, the mass migration, and eventual rehabilitation.</p>
+                </div>
+                <div class="box">
+                    <h3>Mission</h3>
+                    <p>Serves as a vital archive and a stark reminder of the human cost of political division,
+                        emphasizing healing and historical preservation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="css-modal" id="modal-sheesh">
+        <div class="modal-close-bg"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <img alt="Sheesh Mahal 1" src="images/sheesh mahal 1.jpg" />
+                    <img alt="Sheesh Mahal 2" src="images/sheesh mahal 2.jpeg" />
+                    <img alt="Sheesh Mahal 3" src="images/sheesh mahal 3.jpeg" />
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Sheesh Mahal</b></h1>
+                <div class="box">
+                    <h3>Design</h3>
+                    <p>Designed with deep influences from both Rajput and Mughal architecture. Entire chambers are
+                        adorned with thousands of tiny, multicolored mirrors set in intricate floral patterns.</p>
+                </div>
+                <div class="box">
+                    <h3>Features</h3>
+                    <p>Surrounded by lush gardens, terraced landscapes, and an artificial lake. A picturesque suspension
+                        bridge, inspired by the Lakshman Jhula, crosses the lake to an elegant pavilion.</p>
+                </div>
+                <div class="box">
+                    <h3>Art Collection</h3>
+                    <p>Now acts as a museum housing a vast collection of centuries-old rare manuscripts, Tibetan
+                        thangkas, royal armory, and an impressive numismatic (coin) collection.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="backToTop">↑</button>
+
+
+    <script>
+
+        // famous attraction javascript 
+        document.addEventListener('DOMContentLoaded', function () {
+            // Open modals
+            var cards = document.querySelectorAll('.card');
+            cards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                    var modalId = this.getAttribute('data-modal');
+                    if (modalId) {
+                        var modal = document.getElementById(modalId);
+                        if (modal) {
+                            modal.classList.add('active');
+                            document.body.style.overflow = 'hidden';
+                        }
+                    }
+                });
+            });
+
+            // Close modals
+            var closeButtons = document.querySelectorAll('.modal-close-bg, .modal-close-btn');
+            closeButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    var modal = this.closest('.css-modal');
+                    if (modal) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+        });
+
+
+
+        // TIMELINE ACCORDION JS 
+
+        (function () {
+            // Get the timeline container
+            var root = document.getElementById('pb-timeline');
+            if (!root) return;
+
+            // Get all step buttons and all content panels
+            var tabs = root.querySelectorAll('.tl-step');
+            var panels = root.querySelectorAll('.tl-panel');
+
+            // Function to switch the active tab and panel
+            function switchTab(index) {
+                // Loop through every tab
+                for (var i = 0; i < tabs.length; i++) {
+                    if (i === index) {
+                        // Mark this tab as selected
+                        tabs[i].setAttribute('aria-selected', 'true');
+                        // Show its panel
+                        panels[i].classList.add('active');
+                    } else {
+                        // Deselect all other tabs
+                        tabs[i].setAttribute('aria-selected', 'false');
+                        // Hide all other panels
+                        panels[i].classList.remove('active');
+                    }
+                }
+            }
+
+            // Add a click event listener to each tab button
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].addEventListener('click', function () {
+                    // Read which index this button belongs to
+                    var idx = parseInt(this.getAttribute('data-tl-index'));
+                    // Switch to that tab
+                    switchTab(idx);
+                });
+            }
+        })();
+
+
+        const backToTopBtn = document.getElementById("backToTop");
+
+        // Show button when scrolling down
+        window.addEventListener("scroll", function () {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        });
+
+        // Scroll to top when clicked
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+    </script>
+</body>
+
+>>>>>>> 98d539a9dd7fbba47218a7dfd5a78ecc1906d478
 </html>

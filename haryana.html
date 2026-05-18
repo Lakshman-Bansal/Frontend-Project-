@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<!DOCTYPE html>
 <html lang="en">
 
@@ -808,4 +809,2081 @@
 
 </body>
 
+=======
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haryana — The Cradle of Ancient India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ─────────────────────────────────────────────
+           1. CSS VARIABLES & GLOBALS
+        ───────────────────────────────────────────── */
+        :root {
+            --cream: #faf7f0;
+            --warm-white: #fff9ef;
+            --parchment: #f0e8d8;
+            --charcoal: #1c1917;
+            --brown: #44302a;
+
+            --saffron: #f59e0b;
+            --saffron-lt: #fde68a;
+            --sky: #38bdf8;
+            --sky-lt: #bae6fd;
+            --sky-pale: #e0f2fe;
+            --teal: #0d9488;
+            --teal-lt: #99f6e4;
+            --teal-pale: #ccfbf1;
+            --coral: #e07052;
+            --coral-lt: #fecaca;
+            --coral-pale: #fff1ee;
+            --forest: #166534;
+            --forest-lt: #86efac;
+            --forest-pale: #dcfce7;
+
+            --text-body: #44302a;
+            --text-muted: #78716c;
+            --text-light: #a8a29e;
+
+            --font-heading: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            --font-subhead: 'Playfair Display', Georgia, serif;
+            --font-body: 'Roboto', 'Helvetica Neue', sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: rgb(250, 247, 240);
+            color: rgb(68, 48, 42);
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* ─────────────────────────────────────────────
+           3. REUSABLE UTILITIES & LAYOUTS
+        ───────────────────────────────────────────── */
+        .wrapper {
+            max-width: 1620px;
+            margin: 0 auto;
+            padding: 0 44px;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgb(13, 148, 136);
+            margin-bottom: 14px;
+        }
+
+        .section-kicker::before {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: rgb(13, 148, 136);
+            border-radius: 2px;
+        }
+
+        .section-heading {
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: rgb(28, 25, 23);
+            line-height: 1.2;
+            margin-bottom: 36px;
+        }
+
+        .section-heading em {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            color: rgb(13, 148, 136);
+        }
+
+        hr.fancy {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, rgb(186, 230, 253), rgb(253, 230, 138), rgb(153, 246, 228));
+            border-radius: 2px;
+        }
+
+        .txt-slot {
+            border-left: 3px solid rgb(56, 189, 248);
+            background: rgb(224, 242, 254);
+            border-radius: 0 10px 10px 0;
+            padding: 18px 22px 18px 20px;
+            margin-bottom: 22px;
+            max-height: 280px;
+            overflow-y: auto;
+            padding-right: 12px;
+        }
+
+        .txt-slot-tag {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgb(56, 189, 248);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .img-slot {
+            border: 2px dashed rgba(56, 189, 248, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-slot-tall {
+            height: 420px;
+        }
+
+        .img-slot-medium {
+            height: 260px;
+        }
+
+        .img-slot.amber {
+            border-color: rgba(245, 158, 11, .3);
+        }
+
+        .img-slot.coral {
+            border-color: rgba(224, 112, 82, .3);
+        }
+
+        .img-slot.forest {
+            border-color: rgba(22, 101, 52, .25);
+        }
+
+        .img-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            padding: 0 !important;
+        }
+
+        /* ─────────────────────────────────────────────
+           4. NAVBAR
+        ───────────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 52px;
+            background: rgba(250, 247, 240, 0.9);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(240, 232, 216, 0.8);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .nav-logo {
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: rgb(28, 25, 23);
+        }
+
+        .nav-logo em {
+            color: rgb(13, 148, 136);
+            font-style: normal;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 34px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgb(120, 113, 108);
+            transition: color 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: rgb(28, 25, 23);
+        }
+
+        .nav-calendar {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(55, 65, 81);
+            background: transparent;
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            border-radius: 5px;
+            padding: 4px 8px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-calendar:hover,
+        .nav-calendar:focus {
+            border-color: rgb(17, 24, 39);
+            color: rgb(17, 24, 39);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+        }
+
+        /* ─────────────────────────────────────────────
+           5. HERO SECTION
+        ───────────────────────────────────────────── */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 130px 32px 80px;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(46, 125, 50, 0.35) 0%,
+                    rgba(27, 94, 32, 0.52) 55%,
+                    rgba(250, 247, 240, 1.0) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeUp 1s ease 0.2s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(28, 28, 28, 0.22);
+            border: 1px solid rgba(28, 28, 28, 0.48);
+            backdrop-filter: blur(8px);
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 26px;
+        }
+
+        .hero-title {
+            color: rgb(248, 248, 255);
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: clamp(2.8rem, 7.5vw, 6rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            line-height: 1.05;
+            text-shadow: 0 4px 32px rgba(0, 0, 0, 0.22);
+            margin-bottom: 14px;
+        }
+
+        .hero-title em {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: rgb(253, 230, 138);
+        }
+
+        .hero-tagline {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 1.35rem;
+            letter-spacing: 0.01em;
+            color: rgba(28, 28, 28, 0.88);
+            margin-bottom: 28px;
+        }
+
+        .hero-desc {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.9;
+            color: rgba(250, 250, 255, 0.9);
+            max-width: 560px;
+            margin: 0 auto 42px;
+        }
+
+        .hero-cta-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-solid {
+            padding: 13px 36px;
+            background: rgb(245, 158, 11);
+            color: rgb(28, 25, 23);
+            border-radius: 50px;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .btn-solid:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(245, 158, 11, 0.35);
+        }
+
+        /* ─────────────────────────────────────────────
+           6. STATS STRIP
+        ───────────────────────────────────────────── */
+        .stat-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: rgb(255, 249, 239);
+            border-top: 3px solid rgb(240, 232, 216);
+            border-bottom: 3px solid rgb(240, 232, 216);
+        }
+
+        .stat-strip-item {
+            padding: 36px 24px;
+            text-align: center;
+            border-right: 1px solid rgb(240, 232, 216);
+            animation: fadeUp 0.7s ease both;
+            position: relative;
+        }
+
+        .stat-strip-item:last-child {
+            border-right: none;
+        }
+
+        .stat-strip-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 16px;
+            right: 16px;
+            height: 3px;
+            border-radius: 0 0 4px 4px;
+        }
+
+        .stat-strip-item:nth-child(1)::before {
+            background: rgb(56, 189, 248);
+        }
+
+        .stat-strip-item:nth-child(2)::before {
+            background: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3)::before {
+            background: rgb(13, 148, 136);
+        }
+
+        .stat-strip-item:nth-child(4)::before {
+            background: rgb(224, 112, 82);
+        }
+
+        .stat-num {
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            display: block;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .stat-strip-item:nth-child(1) .stat-num {
+            color: rgb(56, 189, 248);
+        }
+
+        .stat-strip-item:nth-child(2) .stat-num {
+            color: rgb(245, 158, 11);
+        }
+
+        .stat-strip-item:nth-child(3) .stat-num {
+            color: rgb(13, 148, 136);
+        }
+
+        .stat-strip-item:nth-child(4) .stat-num {
+            color: rgb(224, 112, 82);
+        }
+
+        .stat-label {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgb(120, 113, 108);
+        }
+
+        /* ─────────────────────────────────────────────
+           7. ABOUT SECTION
+        ───────────────────────────────────────────── */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 72px;
+            align-items: start;
+        }
+
+        .about-text p {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.95;
+            color: rgb(68, 48, 42);
+            margin-bottom: 22px;
+        }
+
+        .pull-quote-wrap {
+            background: linear-gradient(135deg, rgb(224, 242, 254), rgb(204, 251, 241));
+            border-radius: 20px;
+            padding: 52px 60px;
+            position: relative;
+            overflow: hidden;
+            margin: 60px 0;
+        }
+
+        .pull-quote-wrap::before {
+            content: '\201C';
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 10rem;
+            color: rgba(56, 189, 248, 0.18);
+            position: absolute;
+            top: -20px;
+            left: 24px;
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .pull-quote-wrap #quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.6rem;
+            letter-spacing: 0.01em;
+            color: rgb(28, 25, 23);
+            line-height: 1.65;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        /* ─────────────────────────────────────────────
+           8. PLACES SECTION (CARDS)
+        ───────────────────────────────────────────── */
+        #places {
+            overflow: visible;
+        }
+
+        .cards-row {
+            display: flex;
+            gap: 24px;
+            margin-top: 40px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            padding: 80px 44px 100px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            overflow-y: visible !important;
+        }
+
+        .cards-row .card {
+            flex: 0 0 400px;
+            scroll-snap-align: start;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            min-width: 400px;
+            flex: 0 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgb(240, 232, 216);
+        }
+
+        .card:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .card:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+        .card-img-slot {
+            height: 260px;
+        }
+
+        .card-img-slot img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .card:nth-child(1) .card-img-slot {
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        }
+
+        .card:nth-child(2) .card-img-slot {
+            background: linear-gradient(135deg, #fff8e1, #ffe082);
+        }
+
+        .card:nth-child(3) .card-img-slot {
+            background: linear-gradient(135deg, #f3e5f5, #ce93d8);
+        }
+
+        .card:nth-child(4) .card-img-slot {
+            background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
+        }
+
+        .card:nth-child(5) .card-img-slot {
+            background: linear-gradient(135deg, #ffebee, #ef9a9a);
+        }
+
+        .card:nth-child(6) .card-img-slot {
+            background: linear-gradient(135deg, #e1f5fe, #81d4fa);
+        }
+
+        .card:nth-child(7) .card-img-slot {
+            background: linear-gradient(135deg, #fbe9e7, #ffab91);
+        }
+
+        .card:nth-child(8) .card-img-slot {
+            background: linear-gradient(135deg, #efebe9, #bcaaa4);
+        }
+
+        .card-body {
+            padding: 22px 24px 26px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+            border: 1px solid currentColor;
+        }
+
+        .card-tag.spiritual {
+            background: rgb(255, 248, 225);
+            color: rgb(245, 158, 11);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .card-tag.heritage {
+            background: rgb(232, 240, 254);
+            color: rgb(2, 62, 125);
+            border-color: rgba(2, 62, 125, 0.3);
+        }
+
+        .card-tag.nature {
+            background: rgb(209, 250, 229);
+            color: rgb(5, 150, 105);
+            border-color: rgba(5, 150, 105, 0.3);
+        }
+
+        .card-tag.urban {
+            background: rgb(255, 237, 213);
+            color: rgb(249, 115, 22);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: rgb(28, 25, 23);
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .card-text {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: rgb(120, 113, 108);
+            line-height: 1.8;
+        }
+
+        /* ─────────────────────────────────────────────
+           9. CULTURE SECTION
+        ───────────────────────────────────────────── */
+        #culture {
+            padding: 90px 0;
+            background: rgb(250, 247, 240);
+        }
+
+        #culture .wrapper {
+            max-height: 740px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-right: 15px;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        .culture-scroll-container {
+            max-height: 600px;
+            overflow-y: scroll;
+            padding: 20px;
+            border: 1px solid rgb(240, 232, 216);
+            border-radius: 15px;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .two-col.flip {
+            direction: rtl;
+        }
+
+        .two-col.flip>* {
+            direction: ltr;
+        }
+
+        .col-text h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: rgb(28, 25, 23);
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .col-text p {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.97rem;
+            font-weight: 400;
+            color: rgb(68, 48, 42);
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 8px;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgb(13, 148, 136);
+            text-decoration: none;
+            border-bottom: 1px solid rgb(13, 148, 136);
+            padding-bottom: 2px;
+            transition: color .25s, border-color .25s;
+        }
+
+        .read-more:hover {
+            color: rgb(245, 158, 11);
+            border-color: rgb(245, 158, 11);
+        }
+
+        /* ─────────────────────────────────────────────
+           10. COLOUR BAND
+        ───────────────────────────────────────────── */
+        .colour-band {
+            background: linear-gradient(120deg, rgb(13, 148, 136) 0%, #0d6e85 60%, #1e40af 100%);
+            padding: 72px 44px;
+            text-align: center;
+        }
+
+        .colour-band h2 {
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+
+        .colour-band p {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-weight: 300;
+            color: rgba(28, 28, 28, .78);
+            font-size: 1rem;
+            max-width: 580px;
+            margin: 0 auto 36px;
+            line-height: 1.85;
+        }
+
+        /* ─────────────────────────────────────────────
+           11. TIMELINE SECTION
+        ───────────────────────────────────────────── */
+        .timeline {
+            position: relative;
+            padding-left: 44px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 6px;
+            bottom: 6px;
+            width: 2px;
+            background: linear-gradient(to bottom, rgb(56, 189, 248), rgb(13, 148, 136), rgb(245, 158, 11));
+            border-radius: 2px;
+        }
+
+        .tl-item {
+            position: relative;
+            margin-bottom: 50px;
+            animation: slideInLeft .7s ease both;
+        }
+
+        .tl-item details summary {
+            cursor: pointer;
+            list-style: none;
+            font-size: 1.2rem;
+            color: rgb(56, 189, 248);
+            margin-top: 5px;
+            text-align: left;
+        }
+
+        .tl-item details summary::marker {
+            content: "";
+        }
+
+        .tl-item details summary::before {
+            content: '▶';
+            transition: transform 0.3s ease;
+        }
+
+        .tl-item details[open] summary::before {
+            content: '▼';
+        }
+
+        .tl-item:nth-child(1) details summary::before {
+            color: rgb(56, 189, 248);
+        }
+
+        .tl-item:nth-child(2) details summary::before {
+            color: rgb(245, 158, 11);
+        }
+
+        .tl-item:nth-child(3) details summary::before {
+            color: rgb(13, 148, 136);
+        }
+
+        .tl-item:nth-child(4) details summary::before {
+            color: rgb(224, 112, 82);
+        }
+
+        .tl-item .tl-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            margin-top: 10px;
+        }
+
+        .tl-item details[open] .tl-text {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .tl-dot {
+            position: absolute;
+            left: -38px;
+            top: 4px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            background: rgb(56, 189, 248);
+            box-shadow: 0 0 0 2px rgb(56, 189, 248);
+            transition: transform .3s;
+        }
+
+        .tl-item:hover .tl-dot {
+            transform: scale(1.3);
+        }
+
+        .tl-year {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: .68rem;
+            font-weight: 600;
+            letter-spacing: .18em;
+            color: rgb(13, 148, 136);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .tl-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: rgb(28, 25, 23);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .tl-text {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: .9rem;
+            font-weight: 400;
+            color: rgb(120, 113, 108);
+            line-height: 1.8;
+        }
+
+        .mp-details {
+            background-color: #79c0e1;
+            border: 1px solid rgba(63, 117, 133, .15);
+            border-radius: 20px;
+            padding: 26px;
+            margin: 30px 0;
+            box-shadow: 0 12px 30px rgba(12, 74, 102, 0.12);
+            animation: fadeIn 0.8s ease both;
+        }
+
+        .mp-details h2,
+        .mp-details h3,
+        .mp-details h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: rgb(28, 25, 23);
+        }
+
+        .mp-details h2 {
+            margin-bottom: 16px;
+            font-size: clamp(1.6rem, 2.6vw, 2rem);
+            letter-spacing: 0.04em;
+        }
+
+        .mp-details .box {
+            background: rgb(250, 247, 240);
+            border-radius: 14px;
+            border: 1px solid rgba(178, 199, 210, .38);
+            padding: 14px 16px;
+            margin: 10px 0;
+        }
+
+        .mp-details .box h3,
+        .mp-details .box h4 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .mp-details .box ul {
+            list-style: disc;
+            margin-left: 1.25rem;
+            color: rgb(68, 48, 42);
+            line-height: 1.7;
+        }
+
+        /* ─────────────────────────────────────────────
+           12. MAP / EXTRA INFO SECTION
+        ───────────────────────────────────────────── */
+        #map-section .img-slot iframe {
+            width: 100% !important;
+            height: 100% !important;
+            border: none;
+            border-radius: 12px;
+        }
+
+        .info-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 30px;
+            border: 1px solid rgb(240, 232, 216);
+            transition: box-shadow .3s;
+        }
+
+        .info-box:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .07);
+        }
+
+        #map-section .info-box {
+            padding: 16px 15px;
+        }
+
+        .info-box-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: rgb(28, 25, 23);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: rgb(56, 189, 248);
+        }
+
+        /* ─────────────────────────────────────────────
+           13. FOOTER
+        ───────────────────────────────────────────── */
+        .footer {
+            background: rgb(28, 25, 23);
+            padding: 60px 44px 28px;
+        }
+
+        .footer-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 48px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .footer-logo em {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: white;
+        }
+
+        .footer-about {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: .87rem;
+            font-weight: 300;
+            color: white;
+            line-height: 1.85;
+            max-width: 270px;
+        }
+
+        .footer-col-heading {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: .65rem;
+            font-weight: 600;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: rgb(245, 158, 11);
+            margin-bottom: 16px;
+        }
+
+        .footer-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-list a {
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            text-decoration: none;
+            font-size: .87rem;
+            font-weight: 400;
+            color: white;
+            transition: color .25s;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(28, 28, 28, .08);
+            padding-top: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+            font-size: .75rem;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            color: white;
+        }
+
+        /* ─────────────────────────────────────────────
+           14. MODALS (Popups)
+        ───────────────────────────────────────────── */
+        .modal-toggle {
+            display: none;
+        }
+
+        .css-modal {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(28, 25, 23, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        .modal-toggle:checked+.css-modal {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-close-bg {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            position: relative;
+            background: rgb(250, 247, 240);
+            width: 90%;
+            max-width: 1000px;
+            height: 75vh;
+            max-height: 600px;
+            min-height: 400px;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+            box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+            z-index: 10000;
+        }
+
+        .modal-left {
+            flex: 1;
+            background: rgb(224, 242, 254);
+        }
+
+        .modal-left img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: slideshow 12s infinite;
+        }
+
+        .slideshow img:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .slideshow img:nth-child(2) {
+            animation-delay: 4s;
+        }
+
+        .slideshow img:nth-child(3) {
+            animation-delay: 8s;
+        }
+
+        @keyframes slideshow {
+            0% {
+                opacity: 1;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            33% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .modal-right {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            overflow-y: auto;
+        }
+
+        .modal-right h1,
+        .modal-right h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.2rem;
+            color: rgb(28, 25, 23);
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(28, 25, 23);
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .nav {
+                padding: 14px 22px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .stat-strip {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid,
+            .two-col,
+            .extra-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                min-width: 340px;
+            }
+
+            .cards-row {
+                grid-template-columns: 1fr;
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .cards-row .card {
+                flex: 0 0 340px;
+            }
+
+            .wrapper {
+                padding: 0 22px;
+            }
+
+            .hero-title {
+                font-size: clamp(2.2rem, 10vw, 3.5rem);
+            }
+
+            .section-heading {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+
+            .modal-content {
+                flex-direction: column;
+                max-height: 90vh;
+                overflow-y: auto;
+            }
+
+            .modal-left {
+                min-height: 300px;
+            }
+
+            .modal-right {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <a href="frontpage.html" class="back-button" style="display:none;">← Back to Map</a>
+
+        <nav class="nav">
+            <div class="nav-logo">Haryana <em>State</em></div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#places">Landmarks</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#map-section">Location</a></li>
+                <li><input type="date" class="nav-calendar" title="Select a Date"></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <!-- HINT: Insert an authentic drone shot or cinematic video of Haryana here. Good ideas include sweeping yellow mustard fields, the modern skyline of Cyber City Gurugram, or the historic Brahma Sarovar in Kurukshetra. -->
+            <video class="hero-video" autoplay muted loop playsinline poster="placeholder.jpg">
+                <source src="your-video-file.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">🌾 The Land of Champions</div>
+                <h1 class="hero-title">Haryana<br><em>India</em></h1>
+                <p class="hero-tagline">Where Ancient Epics Meet Modern Innovation</p>
+                <p class="hero-desc">
+                    A vibrant state carved out of East Punjab, balancing its deep-rooted Vedic history,
+                    massive agricultural prowess, and rapid industrial growth.
+                </p>
+                <div class="hero-cta-row">
+                    <a href="#places" class="btn-solid">Explore Haryana</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="stat-strip">
+            <div class="stat-strip-item">
+                <span class="stat-num">44K+</span>
+                <span class="stat-label">Area km²</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">22</span>
+                <span class="stat-label">Districts</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">25M+</span>
+                <span class="stat-label">Population</span>
+            </div>
+            <div class="stat-strip-item">
+                <span class="stat-num">2</span>
+                <span class="stat-label">National Parks</span>
+            </div>
+        </div>
+
+        <section class="section" id="about">
+            <div class="wrapper">
+                <div class="section-kicker">About the State</div>
+                <h2 class="section-heading">India's <em>Agricultural & Industrial Hub</em></h2>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            Haryana, translating to "The Abode of God", is a landlocked state in northern India.
+                            Surrounding New Delhi on three sides, it forms a massive part of the National Capital Region
+                            (NCR)
+                            and is celebrated as the historic birthplace of the Bhagavad Gita.
+                        </p>
+
+                        <div class="txt-slot">
+                            <h1>Haryana Overview</h1>
+
+                            <h2>Geography</h2>
+                            <ul>
+                                <li>Bordered by Punjab, Himachal Pradesh, Rajasthan, and Delhi.</li>
+                                <li>Features the Shivalik Hills to the north and the Aravalli Range to the south.</li>
+                                <li>The Yamuna river flows along its eastern boundary.</li>
+                            </ul>
+
+                            <h2>Climate</h2>
+                            <ul>
+                                <li>Experiences a continental climate with extreme temperatures.</li>
+                                <li>Summers are extremely hot, while winters can be quite cold.</li>
+                                <li>Rainfall is concentrated during the monsoon season (July to September).</li>
+                            </ul>
+
+                            <h2>Economy</h2>
+                            <ul>
+                                <li>A pioneer of the Green Revolution, boasting massive wheat and rice production.</li>
+                                <li>Gurugram is a massive IT, automobile, and corporate hub of international repute.
+                                </li>
+                                <li>One of the largest contributors of agricultural and dairy products in India.</li>
+                            </ul>
+
+                            <h2>Languages & Culture</h2>
+                            <ul>
+                                <li>Hindi is the official language, but Haryanvi (a dialect of Hindi) is the soul of the
+                                    state.</li>
+                                <li>Punjabi is heavily spoken, reflecting shared heritage with its neighboring state.
+                                </li>
+                                <li>Renowned for a robust sports culture, producing numerous Olympic medalists,
+                                    particularly in wrestling and boxing.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="img-slot img-slot-tall">
+                        <!-- HINT: Insert an authentic, high-quality photograph showing the duality of Haryana—either a serene agricultural landscape or the towering glass buildings of Gurugram. -->
+                        <img src="placeholder-haryana.jpg" alt="Haryana Landscape">
+                    </div>
+                </div>
+
+                <div class="pull-quote-wrap">
+                    <h2 id="quote">
+                        "Desaan main des Haryana, jit doodh dahi ka khaana."
+                        <br><span style="font-size: 1rem; color: #555;">(Among all lands, Haryana is the best, where the
+                            diet is rich in milk and curd.)</span>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="places">
+            <div class="wrapper">
+                <div class="section-kicker">Must Visit</div>
+                <h2 class="section-heading">Famous <em>Landmarks</em></h2>
+
+                <div class="cards-row">
+                    <label class="card" for="modal-kurukshetra" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Brahma Sarovar or Jyotisar in Kurukshetra -->
+                            <img src="images/Kurukshetra photo.jpg" alt="Kurukshetra">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag spiritual">Spiritual</span>
+                            <h3 class="card-title">Kurukshetra</h3>
+                            <p class="card-text">The ancient, holy land where the Mahabharata war was fought and the
+                                Bhagavad Gita was delivered.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-gurugram" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Cyber Hub or DLF Cyber City Gurugram -->
+                            <img src="images/gurugram.jpg" alt="Gurugram">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag urban">Urban</span>
+                            <h3 class="card-title">Gurugram (Gurgaon)</h3>
+                            <p class="card-text">The "Millennium City" known for its towering skyscrapers, IT parks, and
+                                vibrant nightlife.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-panipat" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Panipat Museum or Kala Amb -->
+                            <img src="images/panipat.jpg" alt="Panipat">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Panipat</h3>
+                            <p class="card-text">The "City of Weavers" and the historic battleground that changed the
+                                course of Indian history three times.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-sultanpur" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of birds/lake at Sultanpur National Park -->
+                            <img src="images/sultanpur.webp" alt="Sultanpur National Park">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag nature">Nature</span>
+                            <h3 class="card-title">Sultanpur National Park</h3>
+                            <p class="card-text">A haven for bird watchers, hosting thousands of migratory birds during
+                                the winter season.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-surajkund" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Surajkund amphitheater or the Mela -->
+                            <img src="images/surajkund.jpg" alt="Surajkund">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Surajkund</h3>
+                            <p class="card-text">An ancient reservoir built by the Tomar kings, famous worldwide for its
+                                annual international crafts mela.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-morni" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Morni Hills and Tikkar Taal -->
+                            <img src="images/Morni.avif" alt="Morni Hills">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag nature">Nature</span>
+                            <h3 class="card-title">Morni Hills</h3>
+                            <p class="card-text">The only hill station in Haryana, located in the Panchkula district,
+                                offering serene lakes and trekking trails.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-pinjore" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of Yadavindra Gardens in Pinjore -->
+                            <img src="images/Pinjore.webp" alt="Pinjore Gardens">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Pinjore Gardens</h3>
+                            <p class="card-text">Also known as Yadavindra Gardens, a beautiful 17th-century garden built
+                                in the classic Mughal style.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="modal-rakhigarhi" style="cursor: pointer;">
+                        <div class="card-img-slot">
+                            <!-- HINT: Real photo of the Rakhigarhi excavation site -->
+                            <img src="images/Rakhigarhi.avif" alt="Rakhigarhi">
+                        </div>
+                        <div class="card-body">
+                            <span class="card-tag heritage">Heritage</span>
+                            <h3 class="card-title">Rakhigarhi</h3>
+                            <p class="card-text">One of the largest and oldest excavated sites of the ancient Indus
+                                Valley Civilization.</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="culture">
+            <div class="wrapper">
+                <div class="section-kicker">Heritage & People</div>
+                <h2 class="section-heading">Culture of <em>Haryana</em></h2>
+
+                <div class="culture-scroll-container">
+                    <div class="two-col flip">
+                        <div class="col-text">
+                            <h3>Festivals</h3>
+                            <p>Haryana's festivals celebrate its agrarian roots, changing seasons, and deeply embedded
+                                mythological history.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Major Festivals</span>
+                                <ul>
+                                    <li>
+                                        <b>Surajkund Crafts Mela:</b> A globally renowned two-week cultural festival
+                                        celebrating traditional Indian handicrafts, handlooms, and folk arts.
+                                    </li>
+                                    <li>
+                                        <b>Teej:</b> Celebrated to welcome the monsoon. Swings are hung from trees, and
+                                        women dress in vibrant colors to perform traditional dances.
+                                    </li>
+                                    <li>
+                                        <b>Gita Mahotsav:</b> Held in Kurukshetra, this massive festival commemorates
+                                        the birth of the Bhagavad Gita with chanting, plays, and deep-daan (floating
+                                        lamps).
+                                    </li>
+                                    <li>
+                                        <b>Baisakhi:</b> A harvest festival celebrated with immense joy and vigor,
+                                        marking the time to reap the winter crops.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall forest">
+                            <!-- HINT: Authentic photograph of Surajkund Mela or Teej celebrations in Haryana. -->
+                            <img src="images/gita.jpg" alt="Festival Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="col-text">
+                            <h3>Traditional Food & Cuisine</h3>
+                            <p>Haryanvi cuisine is essentially a reflection of its agricultural bounty—simple, earthy,
+                                and extraordinarily rich in dairy.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Food Culture</span>
+                                <div>
+                                    <h4>Iconic Dishes</h4>
+                                    <ul>
+                                        <li><b>Bajre Ki Khichdi:</b> A winter staple made of pearl millet, deeply cooked
+                                            and served with a generous dollop of homemade white butter.</li>
+                                        <li><b>Kadhi Pakora:</b> A sour, yogurt-based gravy with gram flour fritters,
+                                            typically eaten with rice.</li>
+                                        <li><b>Singri Ki Sabzi:</b> A traditional desert-bean preparation cooked with
+                                            amchoor (mango powder) and spices.</li>
+                                        <li><b>Besan Masala Roti:</b> A hearty flatbread made from a mix of wheat and
+                                            gram flour, spiced with cumin and green chilies.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4>The Dairy Dominance</h4>
+                                    <ul>
+                                        <li>Freshly churned Chaas (buttermilk), Lassi, and thick Dahi (curd) accompany
+                                            almost every single meal.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall amber">
+                            <!-- HINT: Authentic photograph of Bajre ki Khichdi or a traditional Haryanvi Thali with white butter. -->
+                            <img src="images/Churma.jpg" alt="Food Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col flip">
+                        <div class="col-text">
+                            <h3>Arts & Entertainment</h3>
+                            <p>The state has a robust tradition of folk theatre and music, which served as the primary
+                                source of rural entertainment for centuries.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Arts & Media</span>
+                                <ul>
+                                    <li>
+                                        <b>Saang (Swang):</b> A popular traditional folk dance-theatre form of Haryana,
+                                        incorporating dialogue, music, and mimicry to narrate mythological and
+                                        historical tales.
+                                    </li>
+                                    <li>
+                                        <b>Phulkari & Chope:</b> Traditional embroidery techniques, heavily influenced
+                                        by neighboring Punjab, where intricate, colorful threads are woven onto shawls.
+                                    </li>
+                                    <li>
+                                        <b>Modern Pop:</b> In recent years, Haryanvi pop music and cinema have exploded
+                                        in popularity across North India, bringing local slang to the mainstream.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall forest">
+                            <!-- HINT: Authentic photograph of a Saang folk theatre performance. -->
+                            <img src="images/art.jpg" alt="Arts Culture">
+                        </div>
+                    </div>
+
+                    <div class="two-col">
+                        <div class="col-text">
+                            <h3>Music and Dance</h3>
+                            <p>Dance and music in Haryana are deeply tied to the agricultural cycle and community
+                                celebrations.</p>
+                            <div class="txt-slot">
+                                <span class="txt-slot-tag">✏️ Music & Dance</span>
+                                <ul>
+                                    <li>
+                                        <b>Phag Dance:</b> Performed by farmers during the month of Phalgun to celebrate
+                                        the harvest and the vibrant festival of Holi.
+                                    </li>
+                                    <li>
+                                        <b>Loor Dance:</b> A traditional dance performed by girls around the Holi
+                                        festival, specifically in the Bangar region.
+                                    </li>
+                                    <li>
+                                        <b>Khoria Dance:</b> An all-female dance performed during weddings, especially
+                                        when the groom's procession has left for the bride's house.
+                                    </li>
+                                    <li>
+                                        <b>Folk Instruments:</b> The Tumbi, Sarangi, Dholak, and Been (traditionally
+                                        used by snake charmers) are integral to the Haryanvi soundscape.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="img-slot img-slot-tall amber">
+                            <!-- HINT: Authentic photograph of women performing a traditional Haryanvi folk dance in vibrant attire. -->
+                            <img src="images/dance.jpg" alt="Music Culture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="colour-band">
+            <div style="max-width:700px;margin:0 auto;">
+                <h2>Experience the Spirit of Haryana</h2>
+                <p>From the sacred waters of Kurukshetra to the bustling corporate hubs of Gurugram, Haryana is a
+                    resilient land where rustic traditions walk hand in hand with futuristic ambition.</p>
+            </div>
+        </div>
+
+        <section class="section" id="timeline">
+            <div class="wrapper">
+                <div class="section-kicker">Through the Ages</div>
+                <h2 class="section-heading">Historical <em>Timeline</em></h2>
+
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">2500 BCE</div>
+                        <div class="tl-title">Indus Valley Civilization</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">Flourishing of the Harappan culture in the regions of modern-day Haryana.
+                            </p>
+                            <div class="mp-details">
+                                <h3>Ancient Roots</h3>
+                                <div class="box">
+                                    <ul>
+                                        <li>Sites like Rakhigarhi and Banawali provide evidence of sophisticated urban
+                                            planning, drainage, and trade.</li>
+                                        <li>Rakhigarhi is recognized as one of the largest ancient Harappan sites in the
+                                            world.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1500 BCE</div>
+                        <div class="tl-title">The Epic of Mahabharata</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">The legendary Kurukshetra War was fought on the plains of Haryana.</p>
+                            <div class="mp-details">
+                                <h2>Vedic Period</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li>It was here that Lord Krishna delivered the ultimate philosophical
+                                            discourse, the Bhagavad Gita, to Arjuna.</li>
+                                        <li>The region was part of the Kuru Kingdom, central to ancient Vedic texts.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1526 - 1761</div>
+                        <div class="tl-title">The Battles of Panipat</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">Panipat witnessed three major historic battles that reshaped the destiny
+                                of India.</p>
+                            <div class="mp-details">
+                                <h2>The Turning Points of Indian History</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li><b>1526:</b> First Battle of Panipat (Babur defeated Ibrahim Lodi,
+                                            establishing the Mughal Empire).</li>
+                                        <li><b>1556:</b> Second Battle of Panipat (Akbar defeated Hemu).</li>
+                                        <li><b>1761:</b> Third Battle of Panipat (Ahmad Shah Durrani defeated the
+                                            Marathas).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-year">1966</div>
+                        <div class="tl-title">Formation of Modern Haryana</div>
+                        <details>
+                            <summary></summary>
+                            <p class="tl-text">Haryana was carved out as a separate state from East Punjab.</p>
+                            <div class="mp-details">
+                                <h2>Statehood & Growth</h2>
+                                <div class="box">
+                                    <ul>
+                                        <li>On November 1, 1966, Haryana emerged as an independent state based on
+                                            linguistic demographics.</li>
+                                        <li>Chandigarh was designated as the shared capital of both Punjab and Haryana.
+                                        </li>
+                                        <li>The state rapidly modernized, becoming a leader in the Green Revolution and
+                                            later an IT powerhouse.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="fancy" />
+
+        <section class="section" id="map-section">
+            <div class="wrapper">
+                <div class="section-kicker">Navigation</div>
+                <h2 class="section-heading">Geographical <em>Location</em></h2>
+
+                <div class="info-box" style="width: 100%;">
+                    <div class="info-box-title">
+                        <span class="dot"></span> Haryana State Map
+                    </div>
+                    <div class="img-slot" style="height: 500px; margin-top: 20px; cursor: default;">
+                        <!-- Embed Google Maps pointing to Haryana -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550474.3411624646!2d74.15616551070566!3d29.288593574921617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3e5e499d63c5%3A0x6d9f82d1c92a6c11!2sHaryana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="footer-grid">
+                    <div>
+                        <div class="footer-logo">Haryana <em>State</em></div>
+                        <p class="footer-about">Exploring the ancient heritage, agrarian culture, and modern innovations
+                            of India's land of champions.</p>
+                    </div>
+                    <div>
+                        <div class="footer-col-heading">Quick Links</div>
+                        <ul class="footer-list">
+                            <li><a href="#about">About Haryana</a></li>
+                            <li><a href="#places">Landmarks</a></li>
+                            <li><a href="#culture">Culture</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 Haryana Overview. All rights reserved.</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- MODALS -->
+
+    <input type="checkbox" id="modal-kurukshetra" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-kurukshetra" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-kurukshetra" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Brahma Sarovar / Jyotisar in Kurukshetra -->
+                    <img src="images/Kurukshetra1.jpg" alt="Kurukshetra 1">
+                    <img src="images/Kurukshetra2.jpg" alt="Kurukshetra 2">
+                    <img src="images/Kurukshetra3.jpg" alt="Kurukshetra 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Kurukshetra</b></h1>
+                <div class="box">
+                    <h3>History & Significance</h3>
+                    <ul>
+                        <li>Known universally as the setting for the epic Mahabharata war.</li>
+                        <li>It is the sacred ground where Lord Krishna recited the Bhagavad Gita to Arjuna.</li>
+                        <li>Named after King Kuru, an ancestor of the Kauravas and Pandavas.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Key Sites</h3>
+                    <ul>
+                        <li><b>Brahma Sarovar:</b> A massive ancient water tank where thousands gather for holy dips
+                            during solar eclipses.</li>
+                        <li><b>Jyotisar:</b> The exact spot under a Banyan tree where the Bhagavad Gita was preached.
+                        </li>
+                        <li><b>Sheikh Chilli's Tomb:</b> A beautiful Mughal-era mausoleum.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-gurugram" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-gurugram" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-gurugram" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Gurugram skyline / Cyber Hub -->
+                    <img src="images/gurugram1.jpg" alt="Gurugram 1">
+                    <img src="images/gurugram2.webp" alt="Gurugram 2">
+                    <img src="images/gurugram3.webp" alt="Gurugram 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Gurugram</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Formerly Gurgaon, famously known as the "Millennium City."</li>
+                        <li>One of India's leading financial and industrial hubs, home to Fortune 500 companies.</li>
+                        <li>A symbol of modern India's rapid urbanization and tech boom.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li><b>Cyber Hub:</b> A massive dining and entertainment complex.</li>
+                        <li><b>Kingdom of Dreams:</b> India's first live entertainment, theatre, and leisure
+                            destination.</li>
+                        <li><b>Sultanpur National Park:</b> Located nearby, providing an ecological contrast to the
+                            concrete jungle.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-panipat" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-panipat" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-panipat" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Panipat Battle memorials / Kala Amb -->
+                    <img src="images/panipat1.jpg" alt="Panipat 1">
+                    <img src="images/panipat2.webp" alt="Panipat 2">
+                    <img src="images/panipat3.jpg" alt="Panipat 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Panipat</b></h1>
+                <div class="box">
+                    <h3>Historical Importance</h3>
+                    <ul>
+                        <li>Site of three pivotal battles (1526, 1556, 1761) that shaped the destiny of the Indian
+                            subcontinent.</li>
+                        <li>Often referred to as the "City of Weavers" due to its massive handloom and textile
+                            industries.</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <h3>Key Sites</h3>
+                    <ul>
+                        <li><b>Kala Amb:</b> A memorial built where the Third Battle of Panipat was fiercely fought.
+                        </li>
+                        <li><b>Panipat Museum:</b> Houses relics, weapons, and art from the historic battles.</li>
+                        <li><b>Tomb of Ibrahim Lodi:</b> The resting place of the Sultan defeated by Babur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-sultanpur" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-sultanpur" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-sultanpur" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Sultanpur National Park birds -->
+                    <img src="images/Sultanpur1.webp" alt="Sultanpur 1">
+                    <img src="images/Sultanpur2.jpg" alt="Sultanpur 2">
+                    <img src="images/Sultanpur3.webp" alt="Sultanpur 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Sultanpur National Park</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Located near Gurugram, it is one of Haryana's premier wildlife and nature reserves.</li>
+                        <li>Designated as a Ramsar Site (Wetland of International Importance).</li>
+                        <li>During winter, it becomes a sanctuary for over 250 species of migratory birds from Europe,
+                            Siberia, and Central Asia.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-surajkund" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-surajkund" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-surajkund" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Surajkund reservoir and crafts mela -->
+                    <img src="images/Surajkund1.jpg" alt="Surajkund 1">
+                    <img src="images/Surajkund2.jpg" alt="Surajkund 2">
+                    <img src="images/Surajkund3.webp" alt="Surajkund 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Surajkund</b></h1>
+                <div class="box">
+                    <h3>Heritage & Culture</h3>
+                    <ul>
+                        <li>Translates to "Lake of the Sun," featuring an artificial reservoir built in the backdrop of
+                            the Aravalli hills with an amphitheater shape.</li>
+                        <li>Built by the Tomar king Suraj Pal in the 10th century.</li>
+                        <li>Famous globally for hosting the annual Surajkund International Crafts Mela, celebrating
+                            traditional Indian arts and textiles.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-morni" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-morni" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-morni" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Morni Hills / Tikkar Taal -->
+                    <img src="images/Morni1.webp" alt="Morni 1">
+                    <img src="images/Morni2.avif" alt="Morni 2">
+                    <img src="images/morni3.jpg" alt="Morni 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Morni Hills</b></h1>
+                <div class="box">
+                    <h3>Nature & Escape</h3>
+                    <ul>
+                        <li>The only recognized hill station in Haryana, situated in the Panchkula district.</li>
+                        <li>Offers breathtaking views of the Shivalik range, lush green flora, and diverse wildlife.
+                        </li>
+                        <li>Features two mysterious, interconnected lakes known as Tikkar Taal, separated by a hillock.
+                        </li>
+                        <li>A prime destination for camping, trekking, and boating.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-pinjore" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-pinjore" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-pinjore" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Pinjore Gardens -->
+                    <img src="images/Pinjore1.webp" alt="Pinjore 1">
+                    <img src="images/Pinjore2.webp" alt="Pinjore 2">
+                    <img src="images/pinjore3.jpg" alt="Pinjore 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Pinjore Gardens</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Also known as Yadavindra Gardens, located in the city of Pinjore in the Panchkula district.
+                        </li>
+                        <li>A spectacular example of Mughal Gardens, built in the 17th century by architect Nawab Fidai
+                            Khan.</li>
+                        <li>Built across seven terraces with grand pavilions, fountains, and water channels.</li>
+                        <li>Hosts an annual Mango Festival celebrating summer harvests.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-rakhigarhi" class="modal-toggle">
+    <div class="css-modal">
+        <label for="modal-rakhigarhi" class="modal-close-bg"></label>
+        <div class="modal-content">
+            <label for="modal-rakhigarhi" class="modal-close-btn">×</label>
+            <div class="modal-left">
+                <div class="slideshow">
+                    <!-- HINT: Authentic photos of Rakhigarhi site / artifacts -->
+                    <img src="images/rakhigarhi1.jpg" alt="Rakhigarhi 1">
+                    <img src="images/Rakhigarhi2.webp" alt="Rakhigarhi 2">
+                    <img src="images/Rakhigarhi3.avif" alt="Rakhigarhi 3">
+                </div>
+            </div>
+            <div class="modal-right">
+                <h1><b>Rakhigarhi</b></h1>
+                <div class="box">
+                    <h3>Overview</h3>
+                    <ul>
+                        <li>Located in the Hisar district, it is a village housing one of the most critical
+                            archaeological sites in the world.</li>
+                        <li>Recognized as the largest known city of the ancient Indus Valley (Harappan) Civilization,
+                            predating many other major sites.</li>
+                        <li>Excavations have uncovered advanced drainage systems, terracotta toys, jewelry, and ancient
+                            DNA that is rewriting Indian history.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+>>>>>>> 98d539a9dd7fbba47218a7dfd5a78ecc1906d478
 </html>
